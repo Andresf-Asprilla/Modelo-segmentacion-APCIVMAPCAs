@@ -1,0 +1,387 @@
+[2025-02-21 01:46:23,957] [3736] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /content/apps/radiology; studies: /content/datasets/Task09_Spleen/imagesTr; conf: {'models': 'segmentation_spleen'}
+[2025-02-21 01:46:24,467] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2025-02-21 01:46:24,481] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2025-02-21 01:46:24,482] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2025-02-21 01:46:24,483] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.sw_fastedit.SWFastEditConfig'>
+[2025-02-21 01:46:24,484] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2025-02-21 01:46:24,487] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2025-02-21 01:46:24,489] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2025-02-21 01:46:24,490] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2025-02-21 01:46:24,492] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2025-02-21 01:46:24,493] [3736] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2025-02-21 01:46:24,493] [3736] [MainThread] [INFO] (main:95) - +++ Adding Model: segmentation_spleen => lib.configs.segmentation_spleen.SegmentationSpleen
+[2025-02-21 01:46:24,493] [3736] [MainThread] [INFO] (monailabel.utils.others.generic:187) - Downloading resource: /content/apps/radiology/model/pretrained_segmentation_spleen.pt from https://github.com/Project-MONAI/MONAILabel/releases/download/pretrained/radiology_segmentation_unet_spleen_total_seg.pt
+[2025-02-21 01:46:30,105] [3736] [MainThread] [INFO] (lib.configs.segmentation_spleen:79) - EPISTEMIC Enabled: False; Samples: 5
+[2025-02-21 01:46:30,106] [3736] [MainThread] [INFO] (main:98) - +++ Using Models: ['segmentation_spleen']
+[2025-02-21 01:46:30,106] [3736] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /content/datasets/Task09_Spleen/imagesTr
+[2025-02-21 01:46:30,106] [3736] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2025-02-21 01:46:30,109] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_16 => spleen_16.nii.gz
+[2025-02-21 01:46:30,109] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_14 => spleen_14.nii.gz
+[2025-02-21 01:46:30,109] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_40 => spleen_40.nii.gz
+[2025-02-21 01:46:30,109] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_22 => spleen_22.nii.gz
+[2025-02-21 01:46:30,109] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_52 => spleen_52.nii.gz
+[2025-02-21 01:46:30,109] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_26 => spleen_26.nii.gz
+[2025-02-21 01:46:30,109] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_44 => spleen_44.nii.gz
+[2025-02-21 01:46:30,110] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_6 => spleen_6.nii.gz
+[2025-02-21 01:46:30,110] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_24 => spleen_24.nii.gz
+[2025-02-21 01:46:30,110] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_20 => spleen_20.nii.gz
+[2025-02-21 01:46:30,110] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_59 => spleen_59.nii.gz
+[2025-02-21 01:46:30,110] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_56 => spleen_56.nii.gz
+[2025-02-21 01:46:30,110] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_31 => spleen_31.nii.gz
+[2025-02-21 01:46:30,110] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_17 => spleen_17.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_29 => spleen_29.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_62 => spleen_62.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_19 => spleen_19.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_63 => spleen_63.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_18 => spleen_18.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_53 => spleen_53.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_32 => spleen_32.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_33 => spleen_33.nii.gz
+[2025-02-21 01:46:30,111] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_3 => spleen_3.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_25 => spleen_25.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_2 => spleen_2.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_47 => spleen_47.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_21 => spleen_21.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_61 => spleen_61.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_49 => spleen_49.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_46 => spleen_46.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_41 => spleen_41.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_38 => spleen_38.nii.gz
+[2025-02-21 01:46:30,112] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_8 => spleen_8.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_13 => spleen_13.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_10 => spleen_10.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_9 => spleen_9.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_28 => spleen_28.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_60 => spleen_60.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_27 => spleen_27.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_45 => spleen_45.nii.gz
+[2025-02-21 01:46:30,113] [3736] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_12 => spleen_12.nii.gz
+[2025-02-21 01:46:30,116] [3736] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 41
+[2025-02-21 01:46:30,117] [3736] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2025-02-21 01:46:30,181] [3736] [MainThread] [INFO] (main:129) - +++ Adding Inferer:: segmentation_spleen => <lib.infers.segmentation_spleen.SegmentationSpleen object at 0x7fba2e74df50>
+[2025-02-21 01:46:30,370] [3736] [MainThread] [INFO] (monailabel.sam2.infer:65) - Image Cache Initialized: /root/.cache/monailabel/sam2
+[2025-02-21 01:46:30,371] [3736] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 01:46:30,371] [3736] [MainThread] [INFO] (timeloop:42) - Registered job <function ImageCache.monitor.<locals>.run_scheduler at 0x7fba1ccbbec0>
+[2025-02-21 01:46:30,372] [3736] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 01:46:30,375] [3736] [MainThread] [INFO] (monailabel.utils.others.generic:187) - Downloading resource: /content/apps/radiology/model/sam2_hiera_large.pt from https://huggingface.co/facebook/sam2-hiera-large/resolve/main/sam2_hiera_large.pt
+[2025-02-21 01:47:08,949] [3736] [MainThread] [INFO] (monailabel.utils.others.generic:187) - Downloading resource: /content/apps/radiology/model/sam2_hiera_l.yaml from https://huggingface.co/facebook/sam2-hiera-large/resolve/main/sam2_hiera_l.yaml
+[2025-02-21 01:47:10,202] [3736] [MainThread] [INFO] (main:206) - {'segmentation_spleen': <lib.infers.segmentation_spleen.SegmentationSpleen object at 0x7fba2e74df50>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7fba2e868350>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7fba2e05cb90>, 'sam_2d': <monailabel.sam2.infer.Sam2InferTask object at 0x7fba2e8b0bd0>, 'sam_3d': <monailabel.sam2.infer.Sam2InferTask object at 0x7fba2e88acd0>}
+[2025-02-21 01:47:10,202] [3736] [MainThread] [INFO] (main:221) - +++ Adding Trainer:: segmentation_spleen => <lib.trainers.segmentation_spleen.SegmentationSpleen object at 0x7fba1ccc7f50>
+[2025-02-21 01:47:10,202] [3736] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /root/.cache/monailabel/sessions
+[2025-02-21 01:47:10,202] [3736] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2025-02-21 01:47:10,203] [3736] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2025-02-21 01:47:10,203] [3736] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 01:47:10,204] [3736] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7fba1cd3eca0>
+[2025-02-21 01:47:10,204] [3736] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 01:50:23,502] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /content/apps/radiology; studies: /content/datasets/Task09_Spleen/imagesTr; conf: {'models': 'segmentation_heart_v2'}
+[2025-02-21 01:50:24,052] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2025-02-21 01:50:24,058] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2025-02-21 01:50:24,059] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2025-02-21 01:50:24,059] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.sw_fastedit.SWFastEditConfig'>
+[2025-02-21 01:50:24,060] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2025-02-21 01:50:24,062] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2025-02-21 01:50:24,063] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2025-02-21 01:50:24,063] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2025-02-21 01:50:24,064] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2025-02-21 01:50:24,066] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_heart_v2.Segmentation'>
+[2025-02-21 01:50:24,067] [4823] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2025-02-21 01:50:24,067] [4823] [MainThread] [INFO] (main:95) - +++ Adding Model: segmentation_heart_v2 => lib.configs.segmentation_heart_v2.Segmentation
+[2025-02-21 01:50:24,298] [4823] [MainThread] [INFO] (main:98) - +++ Using Models: ['segmentation_heart_v2']
+[2025-02-21 01:50:24,299] [4823] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /content/datasets/Task09_Spleen/imagesTr
+[2025-02-21 01:50:24,299] [4823] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2025-02-21 01:50:24,307] [4823] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 01:50:24,307] [4823] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2025-02-21 01:50:24,358] [4823] [MainThread] [INFO] (main:129) - +++ Adding Inferer:: segmentation_heart_v2 => <lib.infers.segmentation.Segmentation object at 0x7fb10e72f690>
+[2025-02-21 01:50:24,491] [4823] [MainThread] [INFO] (monailabel.sam2.infer:65) - Image Cache Initialized: /root/.cache/monailabel/sam2
+[2025-02-21 01:50:24,492] [4823] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 01:50:24,492] [4823] [MainThread] [INFO] (timeloop:42) - Registered job <function ImageCache.monitor.<locals>.run_scheduler at 0x7fb108639760>
+[2025-02-21 01:50:24,492] [4823] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 01:50:24,494] [4823] [MainThread] [INFO] (main:206) - {'segmentation_heart_v2': <lib.infers.segmentation.Segmentation object at 0x7fb10e72f690>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7fb10e74c5d0>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7fb10e5dbf90>, 'sam_2d': <monailabel.sam2.infer.Sam2InferTask object at 0x7fb11f6ad1d0>, 'sam_3d': <monailabel.sam2.infer.Sam2InferTask object at 0x7fb10e7387d0>}
+[2025-02-21 01:50:24,495] [4823] [MainThread] [INFO] (main:221) - +++ Adding Trainer:: segmentation_heart_v2 => <lib.trainers.segmentation.Segmentation object at 0x7fb11f594910>
+[2025-02-21 01:50:24,495] [4823] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /root/.cache/monailabel/sessions
+[2025-02-21 01:50:24,495] [4823] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2025-02-21 01:50:24,495] [4823] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2025-02-21 01:50:24,495] [4823] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 01:50:24,496] [4823] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7fb1086b2e80>
+[2025-02-21 01:50:24,496] [4823] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 01:53:46,127] [4823] [MainThread] [INFO] (monailabel.endpoints.datastore:68) - Image: CTACardio; File: UploadFile(filename='tmpqs83_0q4.nii.gz', size=64043584, headers=Headers({'content-disposition': 'form-data; name="file"; filename="C:\\Users\\Usuario\\AppData\\Local\\Temp\\Slicer\\slicer-monai-label2025-02-20_20+51+55.254\\tmpqs83_0q4.nii.gz"', 'content-type': 'application/octet-stream'})); params: {"client_id": "user-xyz"}
+[2025-02-21 01:53:46,198] [4823] [MainThread] [INFO] (monailabel.datastore.local:439) - Adding Image: CTACardio => /tmp/tmpdhyf9ywe.nii.gz
+[2025-02-21 01:53:46,310] [4823] [Thread-1] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 01:53:54,936] [4823] [MainThread] [INFO] (monailabel.endpoints.infer:169) - Infer Request: {'model': 'segmentation_heart_v2', 'image': 'CTACardio', 'largest_cc': False, 'device': 'Tesla T4', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz'}
+[2025-02-21 01:53:54,937] [4823] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:280) - Infer Request (final): {'largest_cc': False, 'device': 'cuda', 'model': 'segmentation_heart_v2', 'image': '/content/datasets/Task09_Spleen/imagesTr/CTACardio.nii.gz', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz', 'description': 'A pre-trained model for volumetric (3D) Segmentation from CT image'}
+[2025-02-21 01:53:54,940] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2025-02-21 01:53:54,940] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path']
+[2025-02-21 01:53:57,588] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 2.6471; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 01:53:57,970] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.3822; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 01:53:57,986] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0158; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 01:53:58,062] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0749; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 01:53:59,055] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Spacingd): Time: 0.9928; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 01:53:59,141] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (NormalizeIntensityd): Time: 0.0859; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 01:53:59,764] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (GaussianSmoothd): Time: 0.6227; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 01:53:59,834] [4823] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityd): Time: 0.0692; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 01:53:59,834] [4823] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:503) - Inferer:: cuda => SlidingWindowInferer => {'roi_size': (96, 96, 96), 'sw_batch_size': 2, 'overlap': 0.4, 'mode': gaussian, 'sigma_scale': 0.125, 'padding_mode': 'replicate', 'cval': 0.0, 'sw_device': None, 'device': None, 'progress': False, 'cpu_thresh': None, 'buffer_steps': None, 'buffer_dim': -1, 'with_coord': False, 'roi_weight_map': None}
+[2025-02-21 01:53:59,834] [4823] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:432) - Infer model path: /content/apps/radiology/model/segmentation_heart_v2.pt
+[2025-02-21 01:56:45,638] [6469] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /content/apps/radiology; studies: /content/datasets/Task09_Spleen/imagesTr; conf: {'models': 'segmentation_spleen'}
+[2025-02-21 01:56:46,174] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2025-02-21 01:56:46,182] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2025-02-21 01:56:46,183] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2025-02-21 01:56:46,184] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.sw_fastedit.SWFastEditConfig'>
+[2025-02-21 01:56:46,184] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2025-02-21 01:56:46,186] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2025-02-21 01:56:46,187] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2025-02-21 01:56:46,188] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2025-02-21 01:56:46,188] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2025-02-21 01:56:46,189] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_heart_v2.Segmentation'>
+[2025-02-21 01:56:46,190] [6469] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2025-02-21 01:56:46,190] [6469] [MainThread] [INFO] (main:95) - +++ Adding Model: segmentation_spleen => lib.configs.segmentation_spleen.SegmentationSpleen
+[2025-02-21 01:56:46,278] [6469] [MainThread] [INFO] (lib.configs.segmentation_spleen:79) - EPISTEMIC Enabled: False; Samples: 5
+[2025-02-21 01:56:46,279] [6469] [MainThread] [INFO] (main:98) - +++ Using Models: ['segmentation_spleen']
+[2025-02-21 01:56:46,279] [6469] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /content/datasets/Task09_Spleen/imagesTr
+[2025-02-21 01:56:46,279] [6469] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2025-02-21 01:56:46,286] [6469] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 01:56:46,286] [6469] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2025-02-21 01:56:46,354] [6469] [MainThread] [INFO] (main:129) - +++ Adding Inferer:: segmentation_spleen => <lib.infers.segmentation_spleen.SegmentationSpleen object at 0x7c2c0a26a410>
+[2025-02-21 01:56:46,514] [6469] [MainThread] [INFO] (monailabel.sam2.infer:65) - Image Cache Initialized: /root/.cache/monailabel/sam2
+[2025-02-21 01:56:46,515] [6469] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 01:56:46,515] [6469] [MainThread] [INFO] (timeloop:42) - Registered job <function ImageCache.monitor.<locals>.run_scheduler at 0x7c2c080c1800>
+[2025-02-21 01:56:46,515] [6469] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 01:56:46,518] [6469] [MainThread] [INFO] (main:206) - {'segmentation_spleen': <lib.infers.segmentation_spleen.SegmentationSpleen object at 0x7c2c0a26a410>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7c2c0a16b810>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7c2c09c83bd0>, 'sam_2d': <monailabel.sam2.infer.Sam2InferTask object at 0x7c2c0a1f2b10>, 'sam_3d': <monailabel.sam2.infer.Sam2InferTask object at 0x7c2c080aed90>}
+[2025-02-21 01:56:46,519] [6469] [MainThread] [INFO] (main:221) - +++ Adding Trainer:: segmentation_spleen => <lib.trainers.segmentation_spleen.SegmentationSpleen object at 0x7c2c0a31add0>
+[2025-02-21 01:56:46,519] [6469] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /root/.cache/monailabel/sessions
+[2025-02-21 01:56:46,519] [6469] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2025-02-21 01:56:46,519] [6469] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2025-02-21 01:56:46,520] [6469] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 01:56:46,520] [6469] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7c2c0833af20>
+[2025-02-21 01:56:46,521] [6469] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:08:17,844] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /content/apps/radiology; studies: /content/datasets/Task09_Spleen/imagesTr; conf: {'models': 'segmentation_heart_v2'}
+[2025-02-21 02:08:18,254] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2025-02-21 02:08:18,259] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2025-02-21 02:08:18,259] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2025-02-21 02:08:18,259] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.sw_fastedit.SWFastEditConfig'>
+[2025-02-21 02:08:18,260] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2025-02-21 02:08:18,264] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2025-02-21 02:08:18,266] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2025-02-21 02:08:18,266] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2025-02-21 02:08:18,266] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2025-02-21 02:08:18,268] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_heart_v2.Segmentation'>
+[2025-02-21 02:08:18,268] [9483] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2025-02-21 02:08:18,268] [9483] [MainThread] [INFO] (main:95) - +++ Adding Model: segmentation_heart_v2 => lib.configs.segmentation_heart_v2.Segmentation
+[2025-02-21 02:08:18,485] [9483] [MainThread] [INFO] (main:98) - +++ Using Models: ['segmentation_heart_v2']
+[2025-02-21 02:08:18,485] [9483] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /content/datasets/Task09_Spleen/imagesTr
+[2025-02-21 02:08:18,486] [9483] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2025-02-21 02:08:18,493] [9483] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 02:08:18,493] [9483] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2025-02-21 02:08:18,553] [9483] [MainThread] [INFO] (main:129) - +++ Adding Inferer:: segmentation_heart_v2 => <lib.infers.segmentation.Segmentation object at 0x7914140f5c10>
+[2025-02-21 02:08:18,695] [9483] [MainThread] [INFO] (monailabel.sam2.infer:65) - Image Cache Initialized: /root/.cache/monailabel/sam2
+[2025-02-21 02:08:18,696] [9483] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:08:18,696] [9483] [MainThread] [INFO] (timeloop:42) - Registered job <function ImageCache.monitor.<locals>.run_scheduler at 0x79140cfc5760>
+[2025-02-21 02:08:18,696] [9483] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:08:18,699] [9483] [MainThread] [INFO] (main:206) - {'segmentation_heart_v2': <lib.infers.segmentation.Segmentation object at 0x7914140f5c10>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7914138bc350>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7914140dc810>, 'sam_2d': <monailabel.sam2.infer.Sam2InferTask object at 0x7914140d3790>, 'sam_3d': <monailabel.sam2.infer.Sam2InferTask object at 0x79141405ab90>}
+[2025-02-21 02:08:18,699] [9483] [MainThread] [INFO] (main:221) - +++ Adding Trainer:: segmentation_heart_v2 => <lib.trainers.segmentation.Segmentation object at 0x79140d0a03d0>
+[2025-02-21 02:08:18,699] [9483] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /root/.cache/monailabel/sessions
+[2025-02-21 02:08:18,699] [9483] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2025-02-21 02:08:18,699] [9483] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2025-02-21 02:08:18,700] [9483] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:08:18,700] [9483] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x79140d03ee80>
+[2025-02-21 02:08:18,700] [9483] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:11:01,733] [9483] [MainThread] [INFO] (monailabel.endpoints.datastore:68) - Image: CTACardio; File: UploadFile(filename='tmpw62zfywv.nii.gz', size=64043584, headers=Headers({'content-disposition': 'form-data; name="file"; filename="C:\\Users\\Usuario\\AppData\\Local\\Temp\\Slicer\\slicer-monai-label2025-02-20_21+09+22.741\\tmpw62zfywv.nii.gz"', 'content-type': 'application/octet-stream'})); params: {"client_id": "user-xyz"}
+[2025-02-21 02:11:01,798] [9483] [MainThread] [INFO] (monailabel.datastore.local:439) - Adding Image: CTACardio => /tmp/tmpql09wjfo.nii.gz
+[2025-02-21 02:12:01,301] [9483] [MainThread] [INFO] (monailabel.endpoints.infer:169) - Infer Request: {'model': 'segmentation_heart_v2', 'image': 'CTACardio', 'largest_cc': False, 'device': 'Tesla T4', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz'}
+[2025-02-21 02:12:01,302] [9483] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:280) - Infer Request (final): {'largest_cc': False, 'device': 'cuda', 'model': 'segmentation_heart_v2', 'image': '/content/datasets/Task09_Spleen/imagesTr/CTACardio.nii.gz', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz', 'description': 'A pre-trained model for volumetric (3D) Segmentation from CT image'}
+[2025-02-21 02:12:01,309] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2025-02-21 02:12:01,309] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path']
+[2025-02-21 02:12:04,182] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 2.8722; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:12:04,478] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.2953; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:12:04,478] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0004; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:12:04,502] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.023; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:12:05,011] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Spacingd): Time: 0.509; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:05,067] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (NormalizeIntensityd): Time: 0.0559; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:05,188] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (GaussianSmoothd): Time: 0.1202; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:05,217] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityd): Time: 0.0293; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:05,217] [9483] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:503) - Inferer:: cuda => SlidingWindowInferer => {'roi_size': (96, 96, 96), 'sw_batch_size': 2, 'overlap': 0.4, 'mode': gaussian, 'sigma_scale': 0.125, 'padding_mode': 'replicate', 'cval': 0.0, 'sw_device': None, 'device': None, 'progress': False, 'cpu_thresh': None, 'buffer_steps': None, 'buffer_dim': -1, 'with_coord': False, 'roi_weight_map': None}
+[2025-02-21 02:12:05,218] [9483] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:432) - Infer model path: /content/apps/radiology/model/segmentation_heart_v2.pt
+[2025-02-21 02:12:32,775] [9483] [MainThread] [INFO] (monailabel.endpoints.infer:169) - Infer Request: {'model': 'segmentation_heart_v2', 'image': 'CTACardio', 'largest_cc': False, 'device': 'Tesla T4', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz'}
+[2025-02-21 02:12:32,776] [9483] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:280) - Infer Request (final): {'largest_cc': False, 'device': 'cuda', 'model': 'segmentation_heart_v2', 'image': '/content/datasets/Task09_Spleen/imagesTr/CTACardio.nii.gz', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz', 'description': 'A pre-trained model for volumetric (3D) Segmentation from CT image'}
+[2025-02-21 02:12:32,777] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2025-02-21 02:12:32,777] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path']
+[2025-02-21 02:12:35,427] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 2.6493; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:12:35,510] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0821; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:12:35,510] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0002; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:12:35,512] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0017; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:12:35,524] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Spacingd): Time: 0.0118; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:35,850] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (NormalizeIntensityd): Time: 0.3259; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:35,863] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (GaussianSmoothd): Time: 0.0126; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:35,889] [9483] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityd): Time: 0.0255; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:12:35,889] [9483] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:503) - Inferer:: cuda => SlidingWindowInferer => {'roi_size': (96, 96, 96), 'sw_batch_size': 2, 'overlap': 0.4, 'mode': gaussian, 'sigma_scale': 0.125, 'padding_mode': 'replicate', 'cval': 0.0, 'sw_device': None, 'device': None, 'progress': False, 'cpu_thresh': None, 'buffer_steps': None, 'buffer_dim': -1, 'with_coord': False, 'roi_weight_map': None}
+[2025-02-21 02:12:35,889] [9483] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:432) - Infer model path: /content/apps/radiology/model/segmentation_heart_v2.pt
+[2025-02-21 02:19:28,390] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /content/apps/radiology; studies: /content/datasets/Task09_Spleen/imagesTr; conf: {'models': 'segmentation_heart_v2'}
+[2025-02-21 02:19:28,905] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2025-02-21 02:19:28,910] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2025-02-21 02:19:28,911] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2025-02-21 02:19:28,911] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.sw_fastedit.SWFastEditConfig'>
+[2025-02-21 02:19:28,912] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2025-02-21 02:19:28,914] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2025-02-21 02:19:28,915] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2025-02-21 02:19:28,915] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2025-02-21 02:19:28,916] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2025-02-21 02:19:28,918] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_heart_v2.Segmentation'>
+[2025-02-21 02:19:28,918] [12391] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2025-02-21 02:19:28,918] [12391] [MainThread] [INFO] (main:95) - +++ Adding Model: segmentation_heart_v2 => lib.configs.segmentation_heart_v2.Segmentation
+[2025-02-21 02:19:29,192] [12391] [MainThread] [INFO] (main:98) - +++ Using Models: ['segmentation_heart_v2']
+[2025-02-21 02:19:29,192] [12391] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /content/datasets/Task09_Spleen/imagesTr
+[2025-02-21 02:19:29,193] [12391] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2025-02-21 02:19:29,201] [12391] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 02:19:29,201] [12391] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2025-02-21 02:19:29,262] [12391] [MainThread] [INFO] (main:129) - +++ Adding Inferer:: segmentation_heart_v2 => <lib.infers.segmentation.Segmentation object at 0x7c5a6e248ed0>
+[2025-02-21 02:19:29,401] [12391] [MainThread] [INFO] (monailabel.sam2.infer:65) - Image Cache Initialized: /root/.cache/monailabel/sam2
+[2025-02-21 02:19:29,401] [12391] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:19:29,402] [12391] [MainThread] [INFO] (timeloop:42) - Registered job <function ImageCache.monitor.<locals>.run_scheduler at 0x7c5a68131760>
+[2025-02-21 02:19:29,402] [12391] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:19:29,405] [12391] [MainThread] [INFO] (main:206) - {'segmentation_heart_v2': <lib.infers.segmentation.Segmentation object at 0x7c5a6e248ed0>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7c5a6e10e1d0>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7c5a6e3b7090>, 'sam_2d': <monailabel.sam2.infer.Sam2InferTask object at 0x7c5a6da04410>, 'sam_3d': <monailabel.sam2.infer.Sam2InferTask object at 0x7c5a68213710>}
+[2025-02-21 02:19:29,405] [12391] [MainThread] [INFO] (main:221) - +++ Adding Trainer:: segmentation_heart_v2 => <lib.trainers.segmentation.Segmentation object at 0x7c5a68212e50>
+[2025-02-21 02:19:29,405] [12391] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /root/.cache/monailabel/sessions
+[2025-02-21 02:19:29,405] [12391] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2025-02-21 02:19:29,406] [12391] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2025-02-21 02:19:29,406] [12391] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:19:29,407] [12391] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7c5a681aae80>
+[2025-02-21 02:19:29,407] [12391] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:20:08,631] [12391] [MainThread] [INFO] (monailabel.endpoints.infer:169) - Infer Request: {'model': 'segmentation_heart_v2', 'image': 'CTACardio', 'largest_cc': False, 'device': 'Tesla T4', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz'}
+[2025-02-21 02:20:08,632] [12391] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:280) - Infer Request (final): {'largest_cc': False, 'device': 'cuda', 'model': 'segmentation_heart_v2', 'image': '/content/datasets/Task09_Spleen/imagesTr/CTACardio.nii.gz', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz', 'description': 'A pre-trained model for volumetric (3D) Segmentation from CT image'}
+[2025-02-21 02:20:08,636] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2025-02-21 02:20:08,636] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path']
+[2025-02-21 02:20:10,901] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 2.2647; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:20:11,177] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.2759; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:20:11,178] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0004; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:20:11,199] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0206; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:20:11,701] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Spacingd): Time: 0.5017; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:20:11,750] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (NormalizeIntensityd): Time: 0.0493; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:20:11,874] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (GaussianSmoothd): Time: 0.1232; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:20:11,904] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityd): Time: 0.03; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:20:11,904] [12391] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:503) - Inferer:: cuda => SlidingWindowInferer => {'roi_size': (96, 96, 96), 'sw_batch_size': 2, 'overlap': 0.4, 'mode': gaussian, 'sigma_scale': 0.125, 'padding_mode': 'replicate', 'cval': 0.0, 'sw_device': None, 'device': None, 'progress': False, 'cpu_thresh': None, 'buffer_steps': None, 'buffer_dim': -1, 'with_coord': False, 'roi_weight_map': None}
+[2025-02-21 02:20:11,904] [12391] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:432) - Infer model path: /content/apps/radiology/model/segmentation_heart_v2.pt
+[2025-02-21 02:20:32,995] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2025-02-21 02:20:32,996] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path', 'latencies', 'pred']
+[2025-02-21 02:20:33,036] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Spacingd): Time: 0.0393; image: torch.Size([8, 512, 512, 321])(torch.float32); pred: torch.Size([8, 319, 319, 268])(torch.float32)
+[2025-02-21 02:20:33,039] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0022; image: torch.Size([8, 512, 512, 321])(torch.float32); pred: torch.Size([8, 319, 319, 268])(torch.float32)
+[2025-02-21 02:20:33,042] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2025-02-21 02:20:33,043] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path', 'latencies', 'pred']
+[2025-02-21 02:20:33,044] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([8, 512, 512, 321])(torch.float32)
+[2025-02-21 02:20:33,699] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.654; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([8, 512, 512, 321])(torch.float32)
+[2025-02-21 02:20:33,732] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.0325; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:20:33,733] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0003; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:20:38,940] [12391] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (GetCentroidsd): Time: 5.2063; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:20:38,940] [12391] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:603) - Writing Result...
+[2025-02-21 02:20:38,941] [12391] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nrrd; write_to_file: True; dtype: uint8
+[2025-02-21 02:20:45,844] [12391] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:335) - ++ Latencies => Total: 37.2125; Pre: 3.2717; Inferer: 21.0883; Invert: 0.0489; Post: 5.8985; Write: 6.9044
+[2025-02-21 02:20:45,845] [12391] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:370) - Result File: /tmp/tmppf2tnaba.nrrd
+[2025-02-21 02:20:45,845] [12391] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:371) - Result Json Keys: ['label_names', 'latencies', 'centroids']
+[2025-02-21 02:31:02,242] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /content/apps/radiology; studies: /content/datasets/Task09_Spleen/imagesTr; conf: {'models': 'segmentation_heart_v2'}
+[2025-02-21 02:31:02,675] [15411] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2025-02-21 02:31:02,684] [15411] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2025-02-21 02:31:02,685] [15411] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_heart_v2.Segmentation'>
+[2025-02-21 02:31:02,685] [15411] [MainThread] [INFO] (main:94) - +++ Adding Model: segmentation_heart_v2 => lib.configs.segmentation_heart_v2.Segmentation
+[2025-02-21 02:31:02,859] [15411] [MainThread] [INFO] (main:97) - +++ Using Models: ['segmentation_heart_v2']
+[2025-02-21 02:31:02,859] [15411] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /content/datasets/Task09_Spleen/imagesTr
+[2025-02-21 02:31:02,859] [15411] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2025-02-21 02:31:02,865] [15411] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 02:31:02,865] [15411] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2025-02-21 02:31:02,916] [15411] [MainThread] [INFO] (main:128) - +++ Adding Inferer:: segmentation_heart_v2 => <lib.infers.segmentation.Segmentation object at 0x784b9f930850>
+[2025-02-21 02:31:03,021] [15411] [MainThread] [INFO] (monailabel.sam2.infer:65) - Image Cache Initialized: /root/.cache/monailabel/sam2
+[2025-02-21 02:31:03,022] [15411] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:31:03,023] [15411] [MainThread] [INFO] (timeloop:42) - Registered job <function ImageCache.monitor.<locals>.run_scheduler at 0x784b9902a2a0>
+[2025-02-21 02:31:03,023] [15411] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:31:03,025] [15411] [MainThread] [INFO] (main:205) - {'segmentation_heart_v2': <lib.infers.segmentation.Segmentation object at 0x784b9f930850>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x784ba019b450>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x784b9f8f5c10>, 'sam_2d': <monailabel.sam2.infer.Sam2InferTask object at 0x784ba00111d0>, 'sam_3d': <monailabel.sam2.infer.Sam2InferTask object at 0x784b9910a310>}
+[2025-02-21 02:31:03,025] [15411] [MainThread] [INFO] (main:220) - +++ Adding Trainer:: segmentation_heart_v2 => <lib.trainers.segmentation.Segmentation object at 0x784b9ff0e490>
+[2025-02-21 02:31:03,025] [15411] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /root/.cache/monailabel/sessions
+[2025-02-21 02:31:03,026] [15411] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2025-02-21 02:31:03,026] [15411] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2025-02-21 02:31:03,026] [15411] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:31:03,027] [15411] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x784b9902a3e0>
+[2025-02-21 02:31:03,027] [15411] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:33:30,446] [15411] [MainThread] [INFO] (monailabel.endpoints.infer:169) - Infer Request: {'model': 'segmentation_heart_v2', 'image': 'CTACardio', 'largest_cc': False, 'device': 'Tesla T4', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz'}
+[2025-02-21 02:33:30,447] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:280) - Infer Request (final): {'largest_cc': False, 'device': 'cuda', 'model': 'segmentation_heart_v2', 'image': '/content/datasets/Task09_Spleen/imagesTr/CTACardio.nii.gz', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz', 'description': 'A pre-trained model for volumetric (3D) Segmentation from CT image'}
+[2025-02-21 02:33:30,450] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2025-02-21 02:33:30,450] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path']
+[2025-02-21 02:33:32,926] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 2.4751; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:33:33,214] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.2873; image: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:33:33,215] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0004; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:33:33,237] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0218; image: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:33:33,798] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Spacingd): Time: 0.5607; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:33:33,847] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (NormalizeIntensityd): Time: 0.0488; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:33:33,975] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (GaussianSmoothd): Time: 0.1275; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:33:34,005] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityd): Time: 0.0301; image: torch.Size([1, 319, 319, 268])(torch.float32)
+[2025-02-21 02:33:34,005] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:503) - Inferer:: cuda => SlidingWindowInferer => {'roi_size': (96, 96, 96), 'sw_batch_size': 2, 'overlap': 0.4, 'mode': gaussian, 'sigma_scale': 0.125, 'padding_mode': 'replicate', 'cval': 0.0, 'sw_device': None, 'device': None, 'progress': False, 'cpu_thresh': None, 'buffer_steps': None, 'buffer_dim': -1, 'with_coord': False, 'roi_weight_map': None}
+[2025-02-21 02:33:34,005] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:432) - Infer model path: /content/apps/radiology/model/segmentation_heart_v2.pt
+[2025-02-21 02:33:54,251] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2025-02-21 02:33:54,251] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path', 'latencies', 'pred']
+[2025-02-21 02:33:54,284] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Spacingd): Time: 0.032; image: torch.Size([8, 512, 512, 321])(torch.float32); pred: torch.Size([8, 319, 319, 268])(torch.float32)
+[2025-02-21 02:33:54,286] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0022; image: torch.Size([8, 512, 512, 321])(torch.float32); pred: torch.Size([8, 319, 319, 268])(torch.float32)
+[2025-02-21 02:33:54,287] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2025-02-21 02:33:54,288] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path', 'latencies', 'pred']
+[2025-02-21 02:33:54,288] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([8, 512, 512, 321])(torch.float32)
+[2025-02-21 02:33:54,944] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.6552; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([8, 512, 512, 321])(torch.float32)
+[2025-02-21 02:33:54,976] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.0323; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([1, 512, 512, 321])(torch.float32)
+[2025-02-21 02:33:54,977] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0003; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:33:59,916] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (GetCentroidsd): Time: 4.9383; image: torch.Size([1, 319, 319, 268])(torch.float32); pred: torch.Size([512, 512, 321])(torch.float32)
+[2025-02-21 02:33:59,916] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:603) - Writing Result...
+[2025-02-21 02:33:59,917] [15411] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nrrd; write_to_file: True; dtype: uint8
+[2025-02-21 02:34:04,243] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:335) - ++ Latencies => Total: 33.7970; Pre: 3.5581; Inferer: 20.2431; Invert: 0.0384; Post: 5.6292; Write: 4.3274
+[2025-02-21 02:34:04,244] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:370) - Result File: /tmp/tmphwps2v3_.nrrd
+[2025-02-21 02:34:04,244] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:371) - Result Json Keys: ['label_names', 'latencies', 'centroids']
+[2025-02-21 02:37:09,787] [15411] [MainThread] [INFO] (monailabel.endpoints.datastore:68) - Image: CTCardioSeq; File: UploadFile(filename='tmp1bkejl_h.nii.gz', size=1341903, headers=Headers({'content-disposition': 'form-data; name="file"; filename="C:\\Users\\Usuario\\AppData\\Local\\Temp\\Slicer\\slicer-monai-label2025-02-20_21+36+23.324\\tmp1bkejl_h.nii.gz"', 'content-type': 'application/octet-stream'})); params: {"client_id": "user-xyz"}
+[2025-02-21 02:37:09,789] [15411] [MainThread] [INFO] (monailabel.datastore.local:439) - Adding Image: CTCardioSeq => /tmp/tmpjx0ts_ob.nii.gz
+[2025-02-21 02:37:09,848] [15411] [Thread-1] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 02:37:59,090] [15411] [MainThread] [INFO] (monailabel.endpoints.infer:169) - Infer Request: {'model': 'segmentation_heart_v2', 'image': 'CTCardioSeq', 'largest_cc': False, 'device': 'Tesla T4', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz'}
+[2025-02-21 02:37:59,091] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:280) - Infer Request (final): {'largest_cc': False, 'device': 'cuda', 'model': 'segmentation_heart_v2', 'image': '/content/datasets/Task09_Spleen/imagesTr/CTCardioSeq.nii.gz', 'result_extension': '.nrrd', 'result_dtype': 'uint8', 'client_id': 'user-xyz', 'description': 'A pre-trained model for volumetric (3D) Segmentation from CT image'}
+[2025-02-21 02:37:59,092] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2025-02-21 02:37:59,092] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path']
+[2025-02-21 02:37:59,120] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.0276; image: torch.Size([128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,121] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0013; image: torch.Size([128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,122] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0002; image: torch.Size([1, 128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,123] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0014; image: torch.Size([1, 128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,130] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Spacingd): Time: 0.0061; image: torch.Size([1, 98, 80, 96])(torch.float32)
+[2025-02-21 02:37:59,142] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (NormalizeIntensityd): Time: 0.0124; image: torch.Size([1, 98, 80, 96])(torch.float32)
+[2025-02-21 02:37:59,146] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (GaussianSmoothd): Time: 0.0039; image: torch.Size([1, 98, 80, 96])(torch.float32)
+[2025-02-21 02:37:59,147] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityd): Time: 0.0006; image: torch.Size([1, 98, 80, 96])(torch.float32)
+[2025-02-21 02:37:59,147] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:503) - Inferer:: cuda => SlidingWindowInferer => {'roi_size': (96, 96, 96), 'sw_batch_size': 2, 'overlap': 0.4, 'mode': gaussian, 'sigma_scale': 0.125, 'padding_mode': 'replicate', 'cval': 0.0, 'sw_device': None, 'device': None, 'progress': False, 'cpu_thresh': None, 'buffer_steps': None, 'buffer_dim': -1, 'with_coord': False, 'roi_weight_map': None}
+[2025-02-21 02:37:59,148] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:432) - Infer model path: /content/apps/radiology/model/segmentation_heart_v2.pt
+[2025-02-21 02:37:59,572] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2025-02-21 02:37:59,572] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path', 'latencies', 'pred']
+[2025-02-21 02:37:59,578] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Spacingd): Time: 0.0046; image: torch.Size([8, 128, 104, 72])(torch.float32); pred: torch.Size([8, 98, 80, 96])(torch.float32)
+[2025-02-21 02:37:59,580] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0021; image: torch.Size([8, 128, 104, 72])(torch.float32); pred: torch.Size([8, 98, 80, 96])(torch.float32)
+[2025-02-21 02:37:59,581] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2025-02-21 02:37:59,581] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['largest_cc', 'device', 'model', 'image', 'result_extension', 'result_dtype', 'client_id', 'description', 'image_path', 'latencies', 'pred']
+[2025-02-21 02:37:59,582] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([1, 98, 80, 96])(torch.float32); pred: torch.Size([8, 128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,582] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0003; image: torch.Size([1, 98, 80, 96])(torch.float32); pred: torch.Size([8, 128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,583] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.0004; image: torch.Size([1, 98, 80, 96])(torch.float32); pred: torch.Size([1, 128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,583] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0002; image: torch.Size([1, 98, 80, 96])(torch.float32); pred: torch.Size([128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,663] [15411] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (GetCentroidsd): Time: 0.0791; image: torch.Size([1, 98, 80, 96])(torch.float32); pred: torch.Size([128, 104, 72])(torch.float32)
+[2025-02-21 02:37:59,663] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:603) - Writing Result...
+[2025-02-21 02:37:59,664] [15411] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nrrd; write_to_file: True; dtype: uint8
+[2025-02-21 02:37:59,675] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:335) - ++ Latencies => Total: 0.5844; Pre: 0.0564; Inferer: 0.4230; Invert: 0.0098; Post: 0.0827; Write: 0.0117
+[2025-02-21 02:37:59,675] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:370) - Result File: /tmp/tmpcoc1l2tc.nrrd
+[2025-02-21 02:37:59,675] [15411] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:371) - Result Json Keys: ['label_names', 'latencies', 'centroids']
+[2025-02-21 02:41:08,287] [18067] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /content/apps/radiology; studies: /content/datasets/Task09_Spleen/imagesTr; conf: {'models': 'segmentation_heart_v2'}
+[2025-02-21 02:41:08,733] [18067] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2025-02-21 02:41:08,739] [18067] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2025-02-21 02:41:08,740] [18067] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_heart_v2.Segmentation'>
+[2025-02-21 02:41:08,740] [18067] [MainThread] [INFO] (main:94) - +++ Adding Model: segmentation_heart_v2 => lib.configs.segmentation_heart_v2.Segmentation
+[2025-02-21 02:41:08,907] [18067] [MainThread] [INFO] (main:97) - +++ Using Models: ['segmentation_heart_v2']
+[2025-02-21 02:41:08,907] [18067] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /content/datasets/Task09_Spleen/imagesTr
+[2025-02-21 02:41:08,907] [18067] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2025-02-21 02:41:08,913] [18067] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2025-02-21 02:41:08,913] [18067] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2025-02-21 02:41:08,970] [18067] [MainThread] [INFO] (main:128) - +++ Adding Inferer:: segmentation_heart_v2 => <lib.infers.segmentation.Segmentation object at 0x7c762ff78ed0>
+[2025-02-21 02:41:09,137] [18067] [MainThread] [INFO] (monailabel.sam2.infer:65) - Image Cache Initialized: /root/.cache/monailabel/sam2
+[2025-02-21 02:41:09,138] [18067] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:41:09,138] [18067] [MainThread] [INFO] (timeloop:42) - Registered job <function ImageCache.monitor.<locals>.run_scheduler at 0x7c7628e022a0>
+[2025-02-21 02:41:09,138] [18067] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2025-02-21 02:41:09,141] [18067] [MainThread] [INFO] (monailabel.utils.others.generic:187) - Downloading resource: /content/apps/radiology/model/sam2_hiera_large.pt from https://huggingface.co/facebook/sam2-hiera-large/resolve/main/sam2_hiera_large.pt
+[2025-02-21 02:41:31,700] [18067] [MainThread] [INFO] (main:205) - {'segmentation_heart_v2': <lib.infers.segmentation.Segmentation object at 0x7c762ff78ed0>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7c7630119c90>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7c762ff7b050>, 'sam_2d': <monailabel.sam2.infer.Sam2InferTask object at 0x7c7628eeae50>, 'sam_3d': <monailabel.sam2.infer.Sam2InferTask object at 0x7c762fde4990>}
+[2025-02-21 02:41:31,700] [18067] [MainThread] [INFO] (main:220) - +++ Adding Trainer:: segmentation_heart_v2 => <lib.trainers.segmentation.Segmentation object at 0x7c7640770b50>
+[2025-02-21 02:41:31,700] [18067] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /root/.cache/monailabel/sessions
+[2025-02-21 02:41:31,700] [18067] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2025-02-21 02:41:31,700] [18067] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2025-02-21 02:41:31,701] [18067] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2025-02-21 02:41:31,701] [18067] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7c762fccd800>
+[2025-02-21 02:41:31,702] [18067] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
