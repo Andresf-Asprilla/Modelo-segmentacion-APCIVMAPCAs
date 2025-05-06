@@ -16,7 +16,8 @@ from typing import Dict
 
 import lib.configs
 from lib.activelearning import Last
-
+from lib.infers.deepgrow_pipeline import InferDeepgrowPipeline
+from lib.infers.vertebra_pipeline import InferVertebraPipeline
 
 import monailabel
 from monailabel.interfaces.app import MONAILabelApp
@@ -378,7 +379,7 @@ def main():
             "train_batch_size": 1,
             "val_batch_size": 1,
             "multi_gpu": False,
-            "val_split": 0.1,
+            "val_split": 0.2,
         },
     )
 

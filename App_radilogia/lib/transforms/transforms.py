@@ -20,6 +20,9 @@ from monai.networks.layers import GaussianFilter
 from monai.transforms import CropForeground, GaussianSmooth, Randomizable, Resize, ScaleIntensity, SpatialCrop
 from monai.transforms.transform import MapTransform, Transform
 from monai.utils.enums import CommonKeys
+from monai.handlers import HausdorffDistance, from_engine
+from monailabel.tasks.train.utils import from_engine_idx
+
 
 LABELS_KEY = "label_names"
 
@@ -519,6 +522,18 @@ def get_guidance_tensor_for_key_label(data, key_label, device) -> torch.Tensor:
     assert type(tmp_gui) is torch.Tensor or type(tmp_gui) is MetaTensor
     return tmp_gui
 
+def region_wise_metrics_HausdorffDistance(regions, metric, prefix, keys=("pred", "label")):
+    all_metrics = dict()
+    all_metrics[metric] = HausdorffDistance(output_transform=from_engine(keys), include_background=False)
+    if regions:
+        labels = regions if isinstance(regions, dict) else {name: idx for idx, name in enumerate(regions, start=1)}
+        for name, idx in labels.items():
+            all_metrics[f"{prefix}_{name}_HausdorffDistance"] = HausdorffDistance(
+                output_transform=from_engine_idx(keys, idx),
+                include_background=False,
+            )
+    return all_metrics
+    
 
 class AddGuidanceSignal(MapTransform):
     """
