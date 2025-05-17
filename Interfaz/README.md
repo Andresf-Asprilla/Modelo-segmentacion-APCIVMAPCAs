@@ -51,7 +51,7 @@ Diseñada para ejecutarse directamente en **Google Colab**, esta herramienta apr
 
 4. Al finalizar, podrás:
    - Visualizar las segmentaciones directamente en 3D Slicer.
-   - Exportar los resultados como archivos `.obj`, `.nrrd` o `.nii.gz`.
+   - Exportar los resultados como archivos `.obj`, `.nrrd`.
    - Usar herramientas de visualización web como 3D Viewer.
 
 ---
