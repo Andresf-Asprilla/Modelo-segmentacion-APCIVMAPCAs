@@ -1,83 +1,88 @@
 
-# 📘 Interfaz de Inferencias 3D con MONAI Label y Modelos Personalizados
+# Interfaz de Inferencias 
 
-## 🧠 Descripción
+Este proyecto ofrece una interfaz interactiva para la inferencia de imágenes médicas 3D, empleando modelos de segmentación profunda entrenados con **MONAI Label** y **nnU-Net**, cuyos resultados pueden visualizarse en plataformas como **3D Slicer** o **3D Viewer**.
 
-Esta interfaz ha sido desarrollada para facilitar la implementación, visualización y exportación de modelos de segmentación médica 3D, utilizando como base la librería [MONAI Label](https://monai.io/label/) y modelos entrenados para el corazón y estructuras vasculares.  
-
-La herramienta fue diseñada en Google Colab para aprovechar recursos en la nube y permitir una experiencia interactiva, sin necesidad de instalaciones locales complejas.
+Diseñada para ejecutarse directamente en **Google Colab**, esta herramienta aprovecha recursos en la nube para ofrecer una experiencia accesible, sin necesidad de instalaciones locales complejas. 
 
 ---
 
-## 🚀 Funcionalidades principales
+## Funcionalidades principales
 
-- 🔧 Instalación automática de dependencias (MONAI, MONAI Label, ITK, PyVista, etc.)
-- 💾 Carga automática de modelos desde Google Drive o repositorios
-- 🧠 Inferencia sobre imágenes médicas 3D
-- 🔍 Visualización interactiva en 3D (con exportación `.obj`)
-- 📤 Descarga de resultados segmentados como archivos `.obj` y `.mtl`
-- 🎞️ Video tutorial incorporado para el uso de la interfaz
+- **Instalación automática de dependencias**  
+  (incluyendo `MONAI`, `MONAI Label`, `nnU-Net`, `ITK`, `PyVista`, `SimpleITK`, `ngrok`, entre otros).
+
+- **Carga automática de modelos**  
+  Carga automática de modelos desde Google Drive.
+
+- **Inferencia sobre imágenes médicas 3D**  
+  En formatos estándar como `.nii.gz`.
+
+- **Exportación y descarga de resultados**  
+  - Para **3D Slicer**: en formatos `.nrrd`, `.nii.gz`, `.obj`, etc.  
+  - Para **3D Viewer/Web**: exportación en `.obj + .mtl`.
+
+- **Video tutoriales incorporados**  
+  Para una curva de aprendizaje más amigable.
+
+- **Compatibilidad con ngrok**  
+  Para exponer servidores locales y facilitar la conexión desde Slicer u otros clientes.
 
 ---
 
-## 📼 Tutoriales en Video
+## Videos Tutoriales
 
-| Tutorial de uso | Actualización de la interfaz |
-|-----------------|------------------------------|
+| Uso general de la interfaz | Actualizaciones recientes |
+|----------------------------|----------------------------|
 | [![Tutorial](https://img.youtube.com/vi/B1_pAmnVFD4/0.jpg)](https://www.youtube.com/watch?v=B1_pAmnVFD4) | [![Actualización](https://img.youtube.com/vi/CCmLW8bEQ2U/0.jpg)](https://www.youtube.com/watch?v=CCmLW8bEQ2U) |
 
-> **📢 Nota:** Esta interfaz fue desarrollada con el apoyo del **Hospital Internacional de Colombia** y la **Clínica Cardio VID**.
+>Esta interfaz fue desarrollada con el apoyo del **Hospital Internacional de Colombia** y la **Clínica Cardio VID** para el análisis y visualización de patologías cardíacas complejas.
 
 ---
 
-## 🏥 Agradecimientos
+## Cómo ejecutar en Google Colab
 
-<div align="center">
-  <img src="https://www.foscal.com.co/wp-content/uploads/2021/02/hic-logo-1.png" alt="Hospital Internacional de Colombia" width="180">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cardiovid.org/wp-content/uploads/2020/08/logo-cardiovid.png" alt="Clínica Cardio VID" width="180">
-</div>
+1. Haz clic en este enlace para abrir la interfaz:  
+[Abrir en Colab](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/Interfaz/Interfaz_Inferencias.ipynb)
 
----
+2. Realiza una copia en goolge drive `Interfaz_Inferencias.ipynb`.
 
-## 📂 Estructura de Archivos Exportados
+3. Sigue las instrucciones del tutorial  para iniciar  servidor MONAI Label, cargar imágenes y ejecutar inferencias.
 
-- `*.obj`: Modelo 3D de la segmentación
-- `*.mtl`: Asignación de colores por segmento (visualización avanzada)
-- Compatible con:
-  - ✅ 3D Slicer (`.obj`)
-  - ✅ 3DViewer Web (`.obj` + `.mtl`)
+4. Al finalizar, podrás:
+   - Visualizar las segmentaciones directamente en 3D Slicer.
+   - Exportar los resultados como archivos `.obj`, `.nrrd` o `.nii.gz`.
+   - Usar herramientas de visualización web como 3D Viewer.
 
 ---
 
-## 📚 Trabajos que hicieron posible esta herramienta
+## Requisitos
 
-- A. Diaz-Pinto, S. Alle, A. Ihsani, M. Asad, V. Nath, F. Pérez-García, P. Mehta, W. Li, H. R. Roth, T. Vercauteren, D. Xu, P. Dogra, S. Ourselin, A. Feng, M. J. Cardoso.  
-  📄 *MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images*, arXiv, 2022.  
+- Navegador web con acceso a Google Colab.
+- Cuenta gratuita de opcional [Ngrok](https://ngrok.com/) (para exponer servidores locales).
+- **3D Slicer** instalado (opcional, para visualización avanzada).
+- Imágenes médicas 3D compatibles (`.nii.gz`).
+
+---
+
+## Casos de uso
+
+- segmentación cardíaca.
+- Pruebas de modelos clínicos en desarrollo sin instalar entornos complejos.
+- Exportación rápida de modelos 3D para impresión, realidad aumentada o análisis morfológico.
+- Entrenamiento médico en interpretación anatómica basada en IA.
+
+---
+
+## Agradecimientos
+
+- **MONAI Team**  
+  A. Diaz-Pinto, S. Alle, A. Ihsani, M. Asad, V. Nath, F. Pérez-García, P. Mehta, W. Li, H. R. Roth, T. Vercauteren, D. Xu, P. Dogra, S. Ourselin, A. Feng, M. J. Cardoso  
+  *MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images*, arXiv, 2022.  
   [https://arxiv.org/pdf/2203.12362.pdf](https://arxiv.org/pdf/2203.12362.pdf)
 
-- D. Oviedo Barreto  
-  📄 *CardioAR3D: Tomografía cardiaca 3D mejorada con realidad aumentada*  
-  Universidad de Antioquia, 2024.
-
-- A. Asprilla Mosquera  
-  📄 *Modelo semiautomático para la visualización 3D de MAPCAs y CIV en pacientes pediátricos con atresia pulmonar*  
-  Universidad de Antioquia, 2025.
+- **D. Oviedo Barreto**  
+  *CardioAR3D: Tomografía cardiaca 3D mejorada con realidad aumentada*, Universidad de Antioquia, 2024.  
+  [https://hdl.handle.net/10495/43745](https://hdl.handle.net/10495/43745)
 
 ---
-
-## 🧪 Cómo ejecutar en Google Colab
-
-1. Ve a [Google Colab](https://colab.research.google.com/)
-2. Abre el archivo `Interfaz_Inferencias.ipynb`
-3. Ejecuta las celdas una a una, siguiendo los mensajes en pantalla
-4. Al finalizar, podrás descargar los modelos 3D y abrirlos en herramientas como **3D Slicer** o **3DViewer**
-
----
-
-## 📬 Contacto
-
-Para más información, sugerencias o colaboración, puedes escribir a:
-
-- ✉️ `nombre@dominio.com`
-- 🏫 Universidad de Antioquia
