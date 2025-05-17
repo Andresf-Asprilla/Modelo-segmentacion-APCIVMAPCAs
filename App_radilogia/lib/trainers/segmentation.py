@@ -12,9 +12,7 @@
 import logging
 
 import torch
-
 from lib.transforms.transforms import NormalizeLabelsInDatasetd
-from lib.transforms.transforms import region_wise_metrics_HausdorffDistance
 from monai.handlers import TensorBoardImageHandler, from_engine
 from monai.inferers import SlidingWindowInferer
 from monai.losses import DiceCELoss
@@ -149,13 +147,7 @@ class Segmentation(BasicTrainTask):
 
     def val_key_metric(self, context: Context):
         return region_wise_metrics(self.norm_labels(), "val_mean_dice", "val")
-    
-    #def train_additional_metrics(self, context: Context):
-       #return region_wise_metrics_HausdorffDistance (self.norm_labels(), "train_HausdorffDistance", "train")
-    
-    def val_additional_metrics(self, context: Context):
-       return region_wise_metrics_HausdorffDistance (self.norm_labels(), "val_HausdorffDistance", "val")
-    
+
     def train_handlers(self, context: Context):
         handlers = super().train_handlers(context)
         if context.local_rank == 0:
