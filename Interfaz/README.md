@@ -59,7 +59,7 @@ Diseñada para ejecutarse directamente en **Google Colab**, esta herramienta apr
 ## Requisitos
 
 - Navegador web con acceso a Google Colab.
-- Cuenta gratuita de opcional [Ngrok](https://ngrok.com/) (para exponer servidores locales).
+- Opcional cuenta gratuita de  [Ngrok](https://ngrok.com/) (para exponer servidores locales).
 - **3D Slicer** instalado (opcional, para visualización avanzada).
 - Imágenes médicas 3D compatibles (`.nii.gz`).
 
