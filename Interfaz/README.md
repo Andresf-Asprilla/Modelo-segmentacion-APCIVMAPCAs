@@ -167,4 +167,8 @@ menu.Inference_button_click()
   *CardioAR3D: Tomografía cardiaca 3D mejorada con realidad aumentada*, Universidad de Antioquia, 2024.  
   [https://hdl.handle.net/10495/43745](https://hdl.handle.net/10495/43745)
 
+- **F. Isensee, P. F. Jaeger, S. A. A. Kohl, J. Petersen, K. H. Maier-Hein**  
+*nnU-Net: A self-configuring method for deep learning-based biomedical image segmentation*, Nature Methods, vol. 18, no. 2, pp. 203–211, 2021.  
+[https://doi.org/10.1038/s41592-020-01008-z](https://doi.org/10.1038/s41592-020-01008-z)
+
 ---
