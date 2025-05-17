@@ -26,7 +26,7 @@ Diseñada para ejecutarse directamente en **Google Colab**, esta herramienta apr
   Para una curva de aprendizaje más amigable.
 
 - **Compatibilidad con ngrok**  
-  Para exponer servidores locales y facilitar la conexión desde Slicer u otros clientes.
+  Facilitar la conexión desde Slicer u otros clientes.
 
 ---
 
@@ -71,6 +71,88 @@ Diseñada para ejecutarse directamente en **Google Colab**, esta herramienta apr
 - Pruebas de modelos clínicos en desarrollo sin instalar entornos complejos.
 - Exportación rápida de modelos 3D para impresión, realidad aumentada o análisis morfológico.
 - Entrenamiento médico en interpretación anatómica basada en IA.
+
+---
+
+# **Documentación Técnica: Interfaz de inferencia para imágenes Médicas**
+
+## **Clases Principales**
+
+### **1. `Crear_Botones2`**
+Maneja la creación de botones interactivos con funcionalidades específicas.
+
+**Métodos Clave:**
+- **`Start_server()`**: Inicia el servidor MONAI Label.
+- **`download_drive()`**: Descarga archivos desde Google Drive.
+- **`convert_dicom_to_nifti()`**: Convierte archivos DICOM a formato NIfTI.
+- **`procesar_segmentacion()`**: Genera modelos 3D (OBJ/MTL) a partir de segmentaciones NRRD.
+- **`run_installations()`**: Ejecuta instalaciones de dependencias vía pip o descarga modelos.
+
+**Parámetros Importantes:**
+- `file_temp`: Directorio temporal para almacenamiento de datos.
+- `install_monai`/`install_radiologia`: Flags de estado de instalaciones.
+
+---
+
+### **2. `Menu_Button`**
+Organiza la interfaz gráfica y gestiona la lógica de interacción.
+
+**Funcionalidades:**
+- **Diseño de UI**: Grids interactivos con botones y desplegables.
+- **Gestión de Estado**: Habilita/deshabilita botones según instalaciones.
+- **Control de Servidor**: Verifica estado del servidor MONAI Label.
+- **Ejecución de Inferencias**: Maneja solicitudes POST a la API de MONAI.
+
+**Componentes de UI:**
+- Selectores de modelo/imagen.
+- Botones para inferencia/descarga/conexión externa (Ngrok).
+- Monitor de inferencias ejecutadas.
+
+---
+## **Flujo de Trabajo**
+
+1. **Instalación de Dependencias**
+   - Instala MONAI Label, PyTorch, y herramientas de procesamiento.
+   ```python
+   "pip install monailabel torch pyngrok..."
+   ```
+
+2. **Descarga de Recursos**
+   - Modelos pre-entrenados desde Google Drive.
+   - App de radiología (configuraciones MONAI).
+
+3. **Carga de Datos**
+   - Desde PC (NIfTI).
+   - Desde Google Drive (DICOM/NIfTI).
+
+4. **Procesamiento**
+   - Conversión automática DICOM → NIfTI.
+   - Segmentación 3D → Generación de mallas.
+
+5. **Inferencia**
+   - Selección de modelo/imagen.
+   - Ejecución en servidor local (GPU).
+   - Descarga de resultados (NRRD/OBJ/MTL).
+
+6. **Visualización**
+   - Exportación de archivos 3D para visualización externa.
+
+---
+## **Ejemplo de Uso**
+
+```python
+# 1. Instalar dependencias
+boton_instalar = Crear_Botones2(...)
+boton_instalar.run_installations("pip install monailabel...")
+
+# 2. Cargar imagen DICOM
+boton_drive = Crear_Botones2(...)
+boton_drive.download_drive()
+
+# 3. Ejecutar inferencia
+menu = Menu_Button(...)
+menu.Inference_button_click()
+```
 
 ---
 
