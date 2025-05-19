@@ -58,13 +58,13 @@ Este modelo fue desarrollado para la **segmentación tridimensional de estructur
 
 ## Training Loss
 
-![Gráfico del entrenamiento mostrando la pérdida durante 100 épocas.](https://developer.download.nvidia.com/assets/Clara/Images/monai_spleen_ct_segmentation_train.png)
+![Gráfico del entrenamiento mostrando la pérdida durante 100 épocas.](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/loss.png)
 
 ---
 
 ## Validation Dice
 
-![Gráfico mostrando el Dice promedio en validación durante 1260 épocas.](https://developer.download.nvidia.com/assets/Clara/Images/monai_spleen_ct_segmentation_val.png)
+![Gráfico mostrando el Dice promedio en validación durante 100 épocas.](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/dice.png)
 
 
 ## MONAI Bundle Commands
