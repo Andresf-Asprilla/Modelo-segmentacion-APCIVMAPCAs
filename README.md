@@ -11,7 +11,7 @@ Este proyecto implementa un sistema de segmentación médica semiautomático par
 - [Requisitos](#Requisitos)
 - [Resultados](#Resultados)
 - [Puntos destacados](#Puntos-destacados)
-- [Acceso al Documento Oficialt](#Acceso-al-Documento-Oficial)
+- [Acceso al Documento Oficial](#Acceso-al-Documento-Oficial)
 - [Citas del Software Utilizado](#Citas-del-Software-Utilizado)
 
 ## Motivacion
@@ -34,7 +34,7 @@ pediátricos con atresia pulmonar.
 
 Acontinuacion se presenta  el diagrama de flojo  metodologia se  adoptada en este proyecto d organizada  en  múltiples  etapas  Cada  una  de  estas  etapas  comprende  procesos  específicos.
 
-![flujo de trabajo](https://github.com/doviedob/CardioAR3D/blob/294b87ec044c39f94411f67d43ca546e443fc968/Images/Workflow.png)
+![flujo de trabajo](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/digrama.png)
 
 1. Conformación y anonimización del banco de imágenes.
 2. Entrenamiento de modelos de segmentación con MONAI y nnU-Net.
@@ -52,6 +52,9 @@ Acontinuacion se presenta  el diagrama de flojo  metodologia se  adoptada en est
 
 ## Resultados
 
+- ![Resultado 1](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_1.mp4.gif)
+- ![Resultado 2](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_2.mp4.gif)
+- ![Resultado 3](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_3.mp4.gif)
 
 ## Puntos destacados
 
