@@ -36,7 +36,7 @@ Diseñada para ejecutarse directamente en **Google Colab**, esta herramienta apr
 |----------------------------|----------------------------|
 | [![Tutorial](https://img.youtube.com/vi/B1_pAmnVFD4/0.jpg)](https://www.youtube.com/watch?v=B1_pAmnVFD4) | [![Actualización](https://img.youtube.com/vi/CCmLW8bEQ2U/0.jpg)](https://www.youtube.com/watch?v=CCmLW8bEQ2U) |
 
->Esta interfaz fue desarrollada con el apoyo del **Hospital Internacional de Colombia** y la **Clínica Cardio VID** para el análisis y visualización de patologías cardíacas complejas.
+>Esta interfaz fue desarrollada con el apoyo de la **Clínica Cardio VID** para el análisis y visualización de patologías cardíacas complejas.
 
 ---
 
