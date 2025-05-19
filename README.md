@@ -1,145 +1,135 @@
-# Welcome to the new nnU-Net!
+# Modelo Semiautomático para la Visualización 3D de MAPCAs y CIV en Pacientes Pediátricos con Atresia Pulmonar
 
-Click [here](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1) if you were looking for the old one instead.
-
-Coming from V1? Check out the [TLDR Migration Guide](documentation/tldr_migration_guide_from_v1.md). Reading the rest of the documentation is still strongly recommended ;-)
-
-## **2024-04-18 UPDATE: New residual encoder UNet presets available!**
-Residual encoder UNet presets substantially improve segmentation performance.
-They ship for a variety of GPU memory targets. It's all awesome stuff, promised! 
-Read more :point_right: [here](documentation/resenc_presets.md) :point_left:
-
-Also check out our [new paper](https://arxiv.org/pdf/2404.09556.pdf) on systematically benchmarking recent developments in medical image segmentation. You might be surprised!
-
-# What is nnU-Net?
-Image datasets are enormously diverse: image dimensionality (2D, 3D), modalities/input channels (RGB image, CT, MRI, microscopy, ...), 
-image sizes, voxel sizes, class ratio, target structure properties and more change substantially between datasets. 
-Traditionally, given a new problem, a tailored solution needs to be manually designed and optimized  - a process that 
-is prone to errors, not scalable and where success is overwhelmingly determined by the skill of the experimenter. Even 
-for experts, this process is anything but simple: there are not only many design choices and data properties that need to 
-be considered, but they are also tightly interconnected, rendering reliable manual pipeline optimization all but impossible! 
-
-![nnU-Net overview](documentation/assets/nnU-Net_overview.png)
-
-**nnU-Net is a semantic segmentation method that automatically adapts to a given dataset. It will analyze the provided 
-training cases and automatically configure a matching U-Net-based segmentation pipeline. No expertise required on your 
-end! You can simply train the models and use them for your application**.
-
-Upon release, nnU-Net was evaluated on 23 datasets belonging to competitions from the biomedical domain. Despite competing 
-with handcrafted solutions for each respective dataset, nnU-Net's fully automated pipeline scored several first places on 
-open leaderboards! Since then nnU-Net has stood the test of time: it continues to be used as a baseline and method 
-development framework ([9 out of 10 challenge winners at MICCAI 2020](https://arxiv.org/abs/2101.00232) and 5 out of 7 
-in MICCAI 2021 built their methods on top of nnU-Net, 
- [we won AMOS2022 with nnU-Net](https://amos22.grand-challenge.org/final-ranking/))!
-
-Please cite the [following paper](https://www.google.com/url?q=https://www.nature.com/articles/s41592-020-01008-z&sa=D&source=docs&ust=1677235958581755&usg=AOvVaw3dWL0SrITLhCJUBiNIHCQO) when using nnU-Net:
-
-    Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring 
-    method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+Este proyecto implementa un sistema de segmentación médica semiautomático para la reconstrucción 3D de estructuras cardíacas (MAPCAs y CIV) en pacientes pediátricos con Atresia Pulmonar. Se utilizaron dos frameworks principales de segmentación médica:[MONAI Label](https://github.com/Project-MONAI/MONAILabel/tree/main), una plataforma interactiva basada en PyTorch diseñada para acelerar el entrenamiento y despliegue de modelos en entornos clínicos, y [nnU-Net](https://github.com/MIC-DKFZ/nnUNet), un marco autoajustable que configura automáticamente su arquitectura y parámetros según las características del conjunto de datos. Además, se desarrolló una interfaz de inferencia accesible vía Google Colab, orientada a personal médico asistencial.
 
 
-## What can nnU-Net do for you?
-If you are a **domain scientist** (biologist, radiologist, ...) looking to analyze your own images, nnU-Net provides 
-an out-of-the-box solution that is all but guaranteed to provide excellent results on your individual dataset. Simply 
-convert your dataset into the nnU-Net format and enjoy the power of AI - no expertise required!
+### TABLA DE CONTENIDO
+- [Motivacion](#Motivacion)
+- [Objetivo general](#Objetivo-general)
+- [Objetivos específicos](#Objetivos-específicos)
+- [Metodología](#Metodología)
+- [Requisitos](#Requisitos)
+- [Resultados](#Resultados)
+- [Puntos destacados](#Puntos-destacados)
+- [Acceso al Documento Oficialt](#Acceso-al-Documento-Oficial)
+- [Citas del Software Utilizado](#Citas-del-Software-Utilizado)
 
-If you are an **AI researcher** developing segmentation methods, nnU-Net:
-- offers a fantastic out-of-the-box applicable baseline algorithm to compete against
-- can act as a method development framework to test your contribution on a large number of datasets without having to 
-tune individual pipelines (for example evaluating a new loss function)
-- provides a strong starting point for further dataset-specific optimizations. This is particularly used when competing 
-in segmentation challenges
-- provides a new perspective on the design of segmentation methods: maybe you can find better connections between 
-dataset properties and best-fitting segmentation pipelines?
+## Motivacion
 
-## What is the scope of nnU-Net?
-nnU-Net is built for semantic segmentation. It can handle 2D and 3D images with arbitrary 
-input modalities/channels. It can understand voxel spacings, anisotropies and is robust even when classes are highly
-imbalanced.
+La complejidad de la AP-CIV y la variabilidad de las MAPCAs dificultan su diagnóstico y planificación quirúrgica. Esta herramienta busca reducir esas barreras mediante la inteligencia artificial aplicada a imágenes de tomografía computarizada, generando modelos 3D que favorecen el entendimiento anatómico y la toma de decisiones clínicas.
 
-nnU-Net relies on supervised learning, which means that you need to provide training cases for your application. The number of 
-required training cases varies heavily depending on the complexity of the segmentation problem. No 
-one-fits-all number can be provided here! nnU-Net does not require more training cases than other solutions - maybe 
-even less due to our extensive use of data augmentation. 
+## Objetivo general
 
-nnU-Net expects to be able to process entire images at once during preprocessing and postprocessing, so it cannot 
-handle enormous images. As a reference: we tested images from 40x40x40 pixels all the way up to 1500x1500x1500 in 3D 
-and 40x40 up to ~30000x30000 in 2D! If your RAM allows it, larger is always possible.
+Desarrollar  un  modelo  semiautomático  para  la  visualización  tridimensional  de  las  arterias 
+colaterales  aortopulmonares  mayores  y  de  la  comunicación  interventricular  en  pacientes 
+pediátricos con atresia pulmonar.
 
-## How does nnU-Net work?
-Given a new dataset, nnU-Net will systematically analyze the provided training cases and create a 'dataset fingerprint'. 
-nnU-Net then creates several U-Net configurations for each dataset: 
-- `2d`: a 2D U-Net (for 2D and 3D datasets)
-- `3d_fullres`: a 3D U-Net that operates on a high image resolution (for 3D datasets only)
-- `3d_lowres` → `3d_cascade_fullres`: a 3D U-Net cascade where first a 3D U-Net operates on low resolution images and 
-then a second high-resolution 3D U-Net refined the predictions of the former (for 3D datasets with large image sizes only)
+## Objetivos específicos
 
-**Note that not all U-Net configurations are created for all datasets. In datasets with small image sizes, the 
-U-Net cascade (and with it the 3d_lowres configuration) is omitted because the patch size of the full 
-resolution U-Net already covers a large part of the input images.**
+- Establecer  un  banco  de  imágenes  de  tomografía  computarizada  cardíaca  en  pacientes  pediátricos  con  atresia  pulmonar  y  de  tetralogía  de  Fallot  en   estadios  avanzados  que presenten arterias colaterales aortopulmonares mayores y comunicación  interventricular. 
+- Entrenar  y  validar  un  modelo  para  la  segmentación  semiautomática  de  imágenes  de tomografía computarizada cardíaca.
+- Desarrollar  una  interfaz  que  permita  la  ejecución  de  inferencias  a  partir  de  modelos previamente entrenados. 
 
-nnU-Net configures its segmentation pipelines based on a three-step recipe:
-- **Fixed parameters** are not adapted. During development of nnU-Net we identified a robust configuration (that is, certain architecture and training properties) that can 
-simply be used all the time. This includes, for example, nnU-Net's loss function, (most of the) data augmentation strategy and learning rate.
-- **Rule-based parameters** use the dataset fingerprint to adapt certain segmentation pipeline properties by following 
-hard-coded heuristic rules. For example, the network topology (pooling behavior and depth of the network architecture) 
-are adapted to the patch size; the patch size, network topology and batch size are optimized jointly given some GPU 
-memory constraint. 
-- **Empirical parameters** are essentially trial-and-error. For example the selection of the best U-net configuration 
-for the given dataset (2D, 3D full resolution, 3D low resolution, 3D cascade) and the optimization of the postprocessing strategy.
+## Metodología
 
-## How to get started?
-Read these:
-- [Installation instructions](documentation/installation_instructions.md)
-- [Dataset conversion](documentation/dataset_format.md)
-- [Usage instructions](documentation/how_to_use_nnunet.md)
+Acontinuacion se presenta  el diagrama de flojo  metodologia se  adoptada en este proyecto d organizada  en  múltiples  etapas  Cada  una  de  estas  etapas  comprende  procesos  específicos.
 
-Additional information:
-- [Learning from sparse annotations (scribbles, slices)](documentation/ignore_label.md)
-- [Region-based training](documentation/region_based_training.md)
-- [Manual data splits](documentation/manual_data_splits.md)
-- [Pretraining and finetuning](documentation/pretraining_and_finetuning.md)
-- [Intensity Normalization in nnU-Net](documentation/explanation_normalization.md)
-- [Manually editing nnU-Net configurations](documentation/explanation_plans_files.md)
-- [Extending nnU-Net](documentation/extending_nnunet.md)
-- [What is different in V2?](documentation/changelog.md)
+![flujo de trabajo](https://github.com/doviedob/CardioAR3D/blob/294b87ec044c39f94411f67d43ca546e443fc968/Images/Workflow.png)
 
-Competitions:
-- [AutoPET II](documentation/competitions/AutoPETII.md)
+1. Conformación y anonimización del banco de imágenes.
+2. Entrenamiento de modelos de segmentación con MONAI y nnU-Net.
+3. Validación cruzada, ajuste de hiperparámetros y métricas.
+4. Desarrollo de la interfaz de inferencias en Google Colab.
+5. Evaluación de usabilidad con personal médico especializado.
 
-[//]: # (- [Ignore label]&#40;documentation/ignore_label.md&#41;)
 
-## Where does nnU-Net perform well and where does it not perform?
-nnU-Net excels in segmentation problems that need to be solved by training from scratch, 
-for example: research applications that feature non-standard image modalities and input channels,
-challenge datasets from the biomedical domain, majority of 3D segmentation problems, etc . We have yet to find a 
-dataset for which nnU-Net's working principle fails!
+## Requisitos
 
-Note: On standard segmentation 
-problems, such as 2D RGB images in ADE20k and Cityscapes, fine-tuning a foundation model (that was pretrained on a large corpus of 
-similar images, e.g. Imagenet 22k, JFT-300M) will provide better performance than nnU-Net! That is simply because these 
-models allow much better initialization. Foundation models are not supported by nnU-Net as 
-they 1) are not useful for segmentation problems that deviate from the standard setting (see above mentioned 
-datasets), 2) would typically only support 2D architectures and 3) conflict with our core design principle of carefully adapting 
-the network topology for each dataset (if the topology is changed one can no longer transfer pretrained weights!) 
+- Cuenta de Google con acceso a Google Colab
+- GPU 
+- [3D Slicer](https://www.slicer.org/) y/o visor WebGL compatible (.obj/.mtl)
+- Dataset de imágenes médicas en formato .nii.gz o .dcm
 
-## What happened to the old nnU-Net?
-The core of the old nnU-Net was hacked together in a short time period while participating in the Medical Segmentation 
-Decathlon challenge in 2018. Consequently, code structure and quality were not the best. Many features 
-were added later on and didn't quite fit into the nnU-Net design principles. Overall quite messy, really. And annoying to work with.
+## Resultados
 
-nnU-Net V2 is a complete overhaul. The "delete everything and start again" kind. So everything is better 
-(in the author's opinion haha). While the segmentation performance [remains the same](https://docs.google.com/spreadsheets/d/13gqjIKEMPFPyMMMwA1EML57IyoBjfC3-QCTn4zRN_Mg/edit?usp=sharing), a lot of cool stuff has been added. 
-It is now also much easier to use it as a development framework and to manually fine-tune its configuration to new 
-datasets. A big driver for the reimplementation was also the emergence of [Helmholtz Imaging](http://helmholtz-imaging.de), 
-prompting us to extend nnU-Net to more image formats and domains. Take a look [here](documentation/changelog.md) for some highlights.
 
-# Acknowledgements
-<img src="documentation/assets/HI_Logo.png" height="100px" />
+## Puntos destacados
 
-<img src="documentation/assets/dkfz_logo.png" height="100px" />
+- El modelo entrenado  es adecuado para la segmentación de estructuras cardíacas complejas en casos de AP-CIV y MAPCAs.
+- La interfaz permite ejecutar inferencias sin conocimientos avanzados, lo que la hace apta para hospitales con recursos limitados.
+- Se recomienda expandir el banco de imágenes y estandarizar la adquisición para mejorar la generalización.
+- El sistema puede integrarse fácilmente en flujos de trabajo hospitalarios gracias a su interfaz ligera y remota.
+- Su estructura modular permite adaptar el sistema a nuevas patologías o modelos con mínimo esfuerzo.
 
-nnU-Net is developed and maintained by the Applied Computer Vision Lab (ACVL) of [Helmholtz Imaging](http://helmholtz-imaging.de) 
-and the [Division of Medical Image Computing](https://www.dkfz.de/en/mic/index.php) at the 
-[German Cancer Research Center (DKFZ)](https://www.dkfz.de/en/index.html).
-"# nnunet" 
+
+## Acceso al Documento Oficial
+
+El documento formal completo que detalla el desarrollo de este proyecto de práctica académica —incluyendo el marco teórico, la metodología, los resultados y las conclusiones— está disponible públicamente en el repositorio institucional de la Universidad de Antioquia. Puedes acceder a él haciendo [clic aquí](https://bibliotecadigital.udea.edu.co/communities/aba95e15-009e-4b9a-a2b0-c8b390d5ad1f).
+
+### Palabras clave
+- Cardiopatías congénitas  
+- Atresia pulmonar  
+- Reconstrucción 3D  
+- Segmentación de imágenes médicas  
+- Aprendizaje profundo  
+- Cardiología pediátrica
+
+## Citas del Software Utilizado
+
+Este proyecto utiliza [nnU-Net](https://github.com/MIC-DKFZ/nnUNet), un software de código abierto. Si usas este software en tu investigación, por favor cita el siguiente artículo:
+
+```F. Isensee, P. F. Jaeger, S. A. A. Kohl, J. Petersen, K. H. Maier-Hein,"nnU-Net: A self-configuring method for deep learning-based biomedical image segmentation", Nature Methods, 18(2), 203–211, 2021.```
+
+Este proyecto emplea [MONAI Label](https://github.com/Project-MONAI/MONAILabel), una plataforma de código abierto para la anotación de imágenes médicas asistida por inteligencia artificial. Si utilizas este software en tu investigación, se recomienda citar el siguiente artículo:
+
+```A. Diaz-Pinto et al., “MONAI Label: A framework for AI-assisted interactive labeling of 3D medical images,” Medical Image Analysis, vol. 95, p. 103207, Jul. 2024, doi: https://doi.org/10.1016/j.media.2024.103207.```
+
+
+o utilice el BibTeX a continuación:
+
+```
+@article{DiazPinto2022monailabel,
+   author = {Diaz-Pinto, Andres and Alle, Sachidanand and Ihsani, Alvin and Asad, Muhammad and
+            Nath, Vishwesh and P{\'e}rez-Garc{\'\i}a, Fernando and Mehta, Pritesh and
+            Li, Wenqi and Roth, Holger R. and Vercauteren, Tom and Xu, Daguang and
+            Dogra, Prerna and Ourselin, Sebastien and Feng, Andrew and Cardoso, M. Jorge},
+    title = {{MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images}},
+  journal = {arXiv e-prints},
+     year = 2022,
+     url  = {https://arxiv.org/pdf/2203.12362.pdf}
+}
+```
+Adicionalmente, se implementa el modelo de coartación aórtica (CoA) desarrollado en el proyecto  [CardioAR3D](https://github.com/doviedob/CardioAR3D)
+
+```D. Oviedo Barreto, “CardioAR3D: Tomografía cardiaca 3D mejorada con realidad aumentada”, Trabajo de grado profesional, Bioingeniería, Universidad de Antioquia, Medellín, Antioquia, Colombia, 2024.```
+
+o utilice el BibTeX a continuación:
+
+```
+@mastersthesis{OviedoBarreto2024,
+  title = {CardioAR3D: Tomografía cardiaca 3D mejorada con realidad aumentada},
+  author = {Oviedo Barreto, D.},
+  school = {Universidad de Antioquia},
+  address = {Medellín, Antioquia, Colombia},
+  year = {2024},
+  degree = {Trabajo de grado profesional},
+  department = {Bioingeniería}
+}
+```
+### Cite
+Por favor  cite de la siguiente forma cuando use directamente este proyecto :
+
+```A. Asprilla Mosquera, "Modelo semiautomático para la visualización 3D de MAPCAs y CIV en pacientes pediátricos con atresia pulmonar", Trabajo de grado, Universidad de Antioquia, 2025.```
+
+
+o utilice el BibTeX a continuación:
+
+```
+@thesis{asprilla2025visualizacion3D,
+  author = {Asprilla Mosquera, Andrés Felipe},
+  title = {Modelo semiautomático para la visualización 3D de Arterias Colaterales Aortopulmonares Mayores y Comunicación Interventricular en pacientes pediátricos con Atresia Pulmonar},
+  year = {2025},
+  school = {Universidad de Antioquia},
+  url = {http://bibliotecadigital.udea.edu.co}
+}
+```

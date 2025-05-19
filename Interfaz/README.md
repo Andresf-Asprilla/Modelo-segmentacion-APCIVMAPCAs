@@ -156,7 +156,7 @@ menu.Inference_button_click()
 
 ---
 
-## Agradecimientos
+## Citación del Software Utilizado
 
 - **MONAI Team**  
   A. Diaz-Pinto, S. Alle, A. Ihsani, M. Asad, V. Nath, F. Pérez-García, P. Mehta, W. Li, H. R. Roth, T. Vercauteren, D. Xu, P. Dogra, S. Ourselin, A. Feng, M. J. Cardoso  
