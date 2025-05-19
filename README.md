@@ -51,26 +51,32 @@ Acontinuacion se presenta  el diagrama de flojo  metodologia se  adoptada en est
 - Dataset de imágenes médicas en formato .nii.gz o .dcm
 
 ## Resultados
-## 📊 Resultados Visuales
 
 A continuación, se presentan ejemplos de segmentación y reconstrucción 3D generadas por el sistema:
 
 <table>
   <tr>
     <td align="center">
-      <strong>MAPCAs</strong><br>
-      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_1.mp4.gif" width="300"/>
+      <strong>Prueba</strong><br>
+      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_1.mp4.gif" width="500"/>
     </td>
     <td align="center">
-      <strong>CIV</strong><br>
-      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_2.mp4.gif" width="300"/>
+      <strong>AP-CIV y MAPCAs</strong><br>
+      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_2.mp4.gif" width="500"/>
     </td>
     <td align="center">
-      <strong>Combinado</strong><br>
-      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_3.mp4.gif" width="300"/>
+      <strong>Control</strong><br>
+      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_3.mp4.gif" width="500"/>
     </td>
   </tr>
 </table>
+
+- La inferencia de prueba corresponde a una imagen que no fue utilizada ni en el entrenamiento ni en la validación del modelo.
+
+- La inferencia AP-CIV y MAPCAs se refiere a una imagen representativa del caso clínico abordado en este proyecto, que presenta las anomalías cardíacas específicas de estudio.
+
+- La inferencia de control pertenece a un paciente que no presenta anomalías estructurales, utilizada como referencia para evaluar la capacidad del modelo frente a otras malformaciones cardíacas.
+
 
 
 ## Puntos destacados
