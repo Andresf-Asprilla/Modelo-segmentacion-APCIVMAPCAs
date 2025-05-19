@@ -1,43 +1,33 @@
 import os
-import shutil
+import zipfile
 import gdown
-from nnunetv2.paths import nnUNetv2_install_pretrained_model_from_zip
 
+# Detectar automáticamente el directorio base donde se ejecuta el usuario
+base_dir = os.getcwd()
 
-mount_dir = os.getcwd()
-def make_if_dont_exist(folder_path, overwrite=False):
-    """
-    Crea una carpeta si no existe. Si 'overwrite' es True, la sobrescribe.
-    """
-    if os.path.exists(folder_path):
-        if overwrite:
-            shutil.rmtree(folder_path)
-            os.makedirs(folder_path)
-    else:
-        os.makedirs(folder_path)
+# Definir rutas a partir del directorio actual
+raw_data = os.path.join(base_dir, "nnUNet_raw")
+preprocessed = os.path.join(base_dir, "nnUNet_preprocessed")
+results = os.path.join(base_dir, "nnUNet_results")
 
-path_dict = {
-    "nnUNet_raw": os.path.join(mount_dir, "nnUNet_raw"),
-    "nnUNet_preprocessed": os.path.join(mount_dir, "nnUNet_preprocessed"),
-    "nnUNet_results": os.path.join(mount_dir, "nnUNet_results"),
-    "RAW_DATA_PATH": os.path.join(mount_dir, "RawData"),
-}
+# Establecer variables de entorno
+os.environ["NNUNET_RAW_DATA"] = raw_data
+os.environ["NNUNET_PREPROCESSED"] = preprocessed
+os.environ["NNUNET_RESULTS"] = results
 
-for env_var, path in path_dict.items():
-    os.environ[env_var] = path
-    make_if_dont_exist(path, overwrite=False)
-os.makedirs("downloads", exist_ok=True)
+# Crear carpetas necesarias
+for path in [raw_data, preprocessed, results]:
+    os.makedirs(path, exist_ok=True)
 
-models = {
-    "APCIVMAPCAs_3d_lowres.zip": "1NYfEutP5l01w-7YGXQzP5Boo5MNzw7CO"
-}
+# Descargar el modelo desde Google Drive
+url = "https://drive.google.com/uc?id=1NYfEutP5l01w-7YGXQzP5Boo5MNzw7CO"
+zip_path = "APCIVMAPCAs_3d_lowres.zip"
+gdown.download(url, zip_path, quiet=False)
 
-for filename, file_id in models.items():
-    url = f"https://drive.google.com/uc?id={file_id}"
-    zip_path = os.path.join("downloads", filename)
-    gdown.download(url, zip_path, quiet=False)
-    nnUNetv2_install_pretrained_model_from_zip(zip_path)
-    os.remove(zip_path)
-if os.path.exists("downloads") and not os.listdir("downloads"):
-    os.rmdir("downloads")
+# Extraer el modelo en la carpeta de resultados
+def extract_model_to_results(zip_path):
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(results)
 
+extract_model_to_results(zip_path)
+os.remove(zip_path)
