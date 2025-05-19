@@ -156,19 +156,16 @@ menu.Inference_button_click()
 
 ---
 
-## Citación del Software Utilizado
+## Referencias de Software Utilizado
 
-- **MONAI Team**  
-  A. Diaz-Pinto, S. Alle, A. Ihsani, M. Asad, V. Nath, F. Pérez-García, P. Mehta, W. Li, H. R. Roth, T. Vercauteren, D. Xu, P. Dogra, S. Ourselin, A. Feng, M. J. Cardoso  
-  *MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images*, arXiv, 2022.  
-  [https://arxiv.org/pdf/2203.12362.pdf](https://arxiv.org/pdf/2203.12362.pdf)
+> A. Diaz-Pinto et al.  
+> *"MONAI Label: A framework for AI-assisted interactive labeling of 3D medical images"*, Medical Image Analysis, vol. 95, p. 103207, Jul. 2024.  
+> DOI: [https://arxiv.org/pdf/2203.12362.pdf](https://arxiv.org/pdf/2203.12362.pdf)
 
-- **D. Oviedo Barreto**  
-  *CardioAR3D: Tomografía cardiaca 3D mejorada con realidad aumentada*, Universidad de Antioquia, 2024.  
-  [https://hdl.handle.net/10495/43745](https://hdl.handle.net/10495/43745)
+> F. Isensee, P. F. Jaeger, S. A. A. Kohl, J. Petersen, K. H. Maier-Hein.  
+> *"nnU-Net: A self-configuring method for deep learning-based biomedical image segmentation"*, Nature Methods, 18(2), 203–211, 2021.                
+> DOI:[https://doi.org/10.1038/s41592-020-01008-z](https://doi.org/10.1038/s41592-020-01008-z)
 
-- **F. Isensee, P. F. Jaeger, S. A. A. Kohl, J. Petersen, K. H. Maier-Hein**  
-*nnU-Net: A self-configuring method for deep learning-based biomedical image segmentation*, Nature Methods, vol. 18, no. 2, pp. 203–211, 2021.  
-[https://doi.org/10.1038/s41592-020-01008-z](https://doi.org/10.1038/s41592-020-01008-z)
+>D. Oviedo Barreto, "CardioAR3D: Tomografía cardiaca 3D mejorada con realidad aumentada", Trabajo de grado profesional, Bioingeniería, Universidad de Antioquia, Medellín, Antioquia, Colombia, 2024.
 
 ---

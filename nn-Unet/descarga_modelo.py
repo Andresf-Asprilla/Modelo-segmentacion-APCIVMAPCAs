@@ -5,7 +5,7 @@ import zipfile
 
 os.makedirs("downloads", exist_ok=True)
 models = {
-    "APCIVMAPCAs_3d_lowres.zip": "1b4CPFHz7J9oMBprjB3D1UrPG-7K_E8yX"  
+    "APCIVMAPCAs_3d_lowres.zip": "1NYfEutP5l01w-7YGXQzP5Boo5MNzw7CO"  
 }
 
 for filename, file_id in models.items():
