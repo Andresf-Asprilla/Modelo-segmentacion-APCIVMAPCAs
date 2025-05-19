@@ -51,10 +51,27 @@ Acontinuacion se presenta  el diagrama de flojo  metodologia se  adoptada en est
 - Dataset de imágenes médicas en formato .nii.gz o .dcm
 
 ## Resultados
+## 📊 Resultados Visuales
 
-- ![Resultado 1](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_1.mp4.gif)
-- ![Resultado 2](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_2.mp4.gif)
-- ![Resultado 3](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_3.mp4.gif)
+A continuación, se presentan ejemplos de segmentación y reconstrucción 3D generadas por el sistema:
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>MAPCAs</strong><br>
+      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_1.mp4.gif" width="300"/>
+    </td>
+    <td align="center">
+      <strong>CIV</strong><br>
+      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_2.mp4.gif" width="300"/>
+    </td>
+    <td align="center">
+      <strong>Combinado</strong><br>
+      <img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_3.mp4.gif" width="300"/>
+    </td>
+  </tr>
+</table>
+
 
 ## Puntos destacados
 
