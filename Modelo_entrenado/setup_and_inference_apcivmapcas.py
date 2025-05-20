@@ -42,7 +42,7 @@ gdown.download("https://drive.google.com/uc?id=1LV8DHtRN5ZZhgP-n9Ym4LthE2wCvM5gM
 
 
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-    zip_ref.extractall(path_dict["NNUNET_RESULTS"])
+    zip_ref.extractall(path_dict["nnUNet_results"])
 os.remove(zip_path)
 
 def obtener_espaciados_originales(ruta_directorio):
