@@ -66,8 +66,8 @@ A continuación, se presentan ejemplos de segmentación y reconstrucción 3D gen
 
 <table>
   <tr>
-    <td align="center"><strong>Prueba</strong><br><img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_1.mp4.gif" width="400"/></td>
-    <td align="center"><strong>AP-CIV y MAPCAs</strong><br><img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_2.mp4.gif" width="400"/></td>
+    <td align="center"><strong>Prueba</strong><br><img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_2.mp4.gif" width="400"/></td>
+    <td align="center"><strong>AP-CIV y MAPCAs</strong><br><img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_1.mp4.gif" width="400"/></td>
     <td align="center"><strong>Control</strong><br><img src="https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/video_3.mp4.gif" width="400"/></td>
   </tr>
 </table>
