@@ -13,7 +13,7 @@ Este proyecto implementa un sistema de segmentación médica semiautomático par
 - [Resultados](#resultados)
 - [Puntos destacados](#puntos-destacados)
 - [Acceso al Documento Oficial](#acceso-al-documento-oficial)
-- [Citas del Software Utilizado](#citas-del-software-utilizado)
+- [Referencias](#Referencias)
 
 ---
 
