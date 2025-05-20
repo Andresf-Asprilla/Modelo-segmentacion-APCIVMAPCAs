@@ -38,7 +38,6 @@ for env_var, path in path_dict.items():
 
 zip_path = "APCIVMAPCAs_3d_lowres.zip"
 gdown.download("https://drive.google.com/uc?id=1NYfEutP5l01w-7YGXQzP5Boo5MNzw7CO", zip_path, quiet=False)
-gdown.download("https://drive.google.com/uc?id=1LV8DHtRN5ZZhgP-n9Ym4LthE2wCvM5gM", quiet=False)
 
 
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
