@@ -140,7 +140,7 @@ Organiza la interfaz gráfica y gestiona la lógica de interacción.
 ---
 ## **Ejemplo de Uso**
 
-```python
+```py
 # 1. Instalar dependencias
 boton_instalar = Crear_Botones2(...)
 boton_instalar.run_installations("pip install monailabel...")
@@ -156,7 +156,7 @@ menu.Inference_button_click()
 
 ---
 
-## Referencias de Software Utilizado
+## Referencias 
 
 > A. Diaz-Pinto et al.  
 > *"MONAI Label: A framework for AI-assisted interactive labeling of 3D medical images"*, Medical Image Analysis, vol. 95, p. 103207, Jul. 2024.  

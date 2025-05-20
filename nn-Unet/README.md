@@ -56,88 +56,48 @@ Este modelo fue desarrollado para la **segmentación tridimensional de estructur
 
 ---
 
-## Training Loss
+## Perdida de entrenamiento
 
 ![Gráfico del entrenamiento mostrando la pérdida durante 100 épocas.](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/loss.png)
 
 ---
 
-## Validation Dice
+## Dice validacion
 
 ![Gráfico mostrando el Dice promedio en validación durante 100 épocas.](https://github.com/Andresf-Asprilla/Modelo-segmentacion-APCIVMAPCAs/blob/main/images/dice.png)
 
 
-## MONAI Bundle Commands
-In addition to the Pythonic APIs, a few command line interfaces (CLI) are provided to interact with the bundle. The CLI supports flexible use cases, such as overriding configs at runtime and predefining arguments in a file.
+## Comandos de uso 
+ Para hacer uso del modelo desarollado sin tener que usar la interfaz solo se debe de instarl las siguientes dependencias como uso del siguiente archivo setup_and_inference_apcivmapcas.py donde se puede realizar inferencias en un solo archivo niifti o mas.
 
-For more details usage instructions, visit the [MONAI Bundle Configuration Page](https://docs.monai.io/en/latest/config_syntax.html).
+#### Dependencias necesarias:
 
-#### Execute training:
-
-```
-python -m monai.bundle run --config_file configs/train.json
-```
-
-Please note that if the default dataset path is not modified with the actual path in the bundle config files, you can also override it by using `--dataset_dir`:
+```bash
+pip install -q git+https://github.com/Project-MONAI/MONAI#egg=monai
+pip install -q gdown
+pip install -q SimpleITK
+pip install -q nnunetv2
 
 ```
-python -m monai.bundle run --config_file configs/train.json --dataset_dir <actual dataset path>
+
+#### Impotyacion y ejecucion  :
+La entrada puede ser una imagen específica o una carpeta que contenga varias imágenes. Los resultados se guardarán en la carpeta indicada como destino, y tras el preprocesamiento, las segmentaciones finales se ubicarán en la ruta proporcionada.
+
+Es importante que los datos de entrada estén normalizados y tengan un espaciado definido para que el modelo entrenado funcione correctamente.
+
+```py
+from setup_and_inference_apcivmapcas import correr_inferencia
+
+correr_inferencia(
+    input_path="/content/drive/MyDrive/baseDatos/imagen.nii.gz",
+    output_folder="/content/salidatemporal",
+    carpeta_segmentaciones_finales="/content/final",
+    ejecutar_normalizacion=True,
+    nuevo_espaciado=[1.0, 1.0, 1.0]
+)
 ```
+# Referencias 
 
-#### Override the `train` config to execute multi-GPU training:
-
-```
-torchrun --standalone --nnodes=1 --nproc_per_node=2 -m monai.bundle run --config_file "['configs/train.json','configs/multi_gpu_train.json']"
-```
-
-Please note that the distributed training-related options depend on the actual running environment; thus, users may need to remove `--standalone`, modify `--nnodes`, or do some other necessary changes according to the machine used. For more details, please refer to [pytorch's official tutorial](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html).
-
-#### Override the `train` config to execute evaluation with the trained model:
-
-```
-python -m monai.bundle run --config_file "['configs/train.json','configs/evaluate.json']"
-```
-
-#### Override the `train` config and `evaluate` config to execute multi-GPU evaluation:
-
-```
-torchrun --standalone --nnodes=1 --nproc_per_node=2 -m monai.bundle run --config_file "['configs/train.json','configs/evaluate.json','configs/multi_gpu_evaluate.json']"
-```
-
-#### Execute inference:
-
-```
-python -m monai.bundle run --config_file configs/inference.json
-```
-
-#### Export checkpoint to TensorRT based models with fp32 or fp16 precision:
-
-```
-python -m monai.bundle trt_export --net_id network_def --filepath models/model_trt.ts --ckpt_file models/model.pt --meta_file configs/metadata.json --config_file configs/inference.json --precision <fp32/fp16> --dynamic_batchsize "[1, 4, 8]" --use_onnx "True" --use_trace "True"
-```
-
-#### Execute inference with the TensorRT model:
-
-```
-python -m monai.bundle run --config_file "['configs/inference.json', 'configs/inference_trt.json']"
-```
-
-# References
-[1] Xia, Yingda, et al. "3D Semi-Supervised Learning with Uncertainty-Aware Multi-View Co-Training." arXiv preprint arXiv:1811.12506 (2018). https://arxiv.org/abs/1811.12506.
-
-[2] Kerfoot E., Clough J., Oksuz I., Lee J., King A.P., Schnabel J.A. (2019) Left-Ventricle Quantification Using Residual U-Net. In: Pop M. et al. (eds) Statistical Atlases and Computational Models of the Heart. Atrial Segmentation and LV Quantification Challenges. STACOM 2018. Lecture Notes in Computer Science, vol 11395. Springer, Cham. https://doi.org/10.1007/978-3-030-12029-0_40
-
-# License
-Copyright (c) MONAI Consortium
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+> F. Isensee, P. F. Jaeger, S. A. A. Kohl, J. Petersen, K. H. Maier-Hein.  
+> *"nnU-Net: A self-configuring method for deep learning-based biomedical image segmentation"*, Nature Methods, 18(2), 203–211, 2021.                
+> DOI:[https://doi.org/10.1038/s41592-020-01008-z](https://doi.org/10.1038/s41592-020-01008-z)

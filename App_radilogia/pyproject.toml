@@ -1,9 +1,0 @@
-[project]
-name = "monai_label_APCIVMP"
-version = "0.1.0"
-description = "Este un trabajo basado en el framework de monai"
-requires-python = ">=3.7"
-
-dependencies = [
-    "gdown"
-]
