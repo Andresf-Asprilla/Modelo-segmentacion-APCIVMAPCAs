@@ -41,11 +41,24 @@ Este modelo fue desarrollado para la **segmentación tridimensional de estructur
 
 ---
 
-## Métricas de desempeño por segmento
+## Métricas de desempeño 
 
 **Métricas utilizadas**:  
 - Dice Similarity Coefficient (DSC)  
 - Hausdorff Distance (HD)
+  
+## Desempeño por pliegue  
+
+| Pliegue           | DSC (%) | HD (mm)   |
+|-------------------|---------|-----------|
+| 0                 | 87.64   | 20.6365   |
+| 1                 | 90.72   | 15.2086   |
+| 2                 | 82.11   | 38.0063   |
+| 3                 | 89.24   | 35.4754   |
+| 4                 | 80.98   | 50.9371   |
+| Validacion cruzada| 86.14   | 32.0512   |
+
+## Desempeño por segmento   
 
 | Segmento          | DSC (%) | HD (mm)   |
 |-------------------|---------|-----------|
