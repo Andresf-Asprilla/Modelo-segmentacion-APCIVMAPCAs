@@ -88,7 +88,6 @@ Este modelo fue desarrollado para la **segmentación tridimensional de estructur
 ```bash
 pip install -q git+https://github.com/Project-MONAI/MONAI#egg=monai
 pip install -q gdown
-pip install -q SimpleITK
 pip install -q nnunetv2
 
 ```
