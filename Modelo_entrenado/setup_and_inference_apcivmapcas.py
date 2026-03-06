@@ -160,7 +160,6 @@ def correr_inferencia(input_path, output_folder, carpeta_segmentaciones_finales,
     RestaurarEspaciadoSalida(output_folder, espaciados_originales, nombres_originales)
 
     if ejecutar_normalizacion:
-        renombrar_segmentaciones(output_folder, nombres_originales, carpeta_segmentaciones_finales)
-        for archivo in os.listdir(output_folder):
-            if archivo.startswith("paciente_"):
-                os.remove(os.path.join(output_folder, archivo))
+         renombrar_segmentaciones(output_folder, nombres_originales, carpeta_segmentaciones_finales)
+         shutil.rmtree(output_folder)
+         os.makedirs(output_folder)
