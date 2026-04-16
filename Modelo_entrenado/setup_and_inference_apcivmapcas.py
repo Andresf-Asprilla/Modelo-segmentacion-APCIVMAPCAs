@@ -36,14 +36,16 @@ for env_var, path in path_dict.items():
     make_if_dont_exist(path, overwrite=False)
 
 
-zip_path = "APCIVMAPCAs_3d_lowres.zip"
-gdown.download("https://drive.google.com/uc?id=1NYfEutP5l01w-7YGXQzP5Boo5MNzw7CO", zip_path, quiet=False)
+modelo_path = os.path.join(path_dict["nnUNet_results"], "Dataset506_APCIVMP")
 
+if not os.path.exists(modelo_path):
+    print("Descargando modelo...")
+    gdown.download("https://drive.google.com/uc?id=1NYfEutP5l01w-7YGXQzP5Boo5MNzw7CO", zip_path, quiet=False)
 
-with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-    zip_ref.extractall(path_dict["nnUNet_results"])
-os.remove(zip_path)
-
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(path_dict["nnUNet_results"])
+    os.remove(zip_path)
+     
 def obtener_espaciados_originales(ruta_directorio):
     espaciados = {}
     for archivo in os.listdir(ruta_directorio):
