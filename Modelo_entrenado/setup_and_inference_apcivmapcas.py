@@ -41,7 +41,7 @@ modelo_path = os.path.join(path_dict["nnUNet_results"], "Dataset506_APCIVMP")
 if not os.path.exists(modelo_path):
     print("Descargando modelo...")
     zip_path = "APCIVMAPCAs_3d_lowres.zip"
-    gdown.download("https://drive.google.com/uc?id=1NYfEutP5l01w-7YGXQzP5Boo5MNzw7CO", zip_path, quiet=False)
+    gdown.download("https://drive.google.com/uc?id=1AAUU4_AUJ8JN9niL-8zPKBjuPOObbw2_", zip_path, quiet=False)
 
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(path_dict["nnUNet_results"])
